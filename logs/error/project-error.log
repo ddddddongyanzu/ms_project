@@ -1,0 +1,44 @@
+{"level":"ERROR","time":"2024-12-19T13:26:39.812+0800","caller":"user/user.go:45","msg":"短信平台调用成功， 发送短信 error"}
+{"level":"ERROR","time":"2024-12-19T22:39:29.775+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T10:06:20.274+0800","caller":"discovery/resolver.go:106","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T13:11:42.856+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T13:11:45.858+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T13:11:48.858+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T13:11:51.859+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T14:19:57.627+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T14:20:00.630+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T14:20:03.630+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T14:20:06.631+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T14:20:09.631+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T14:20:12.631+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T14:20:15.632+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T14:20:18.633+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T14:20:21.633+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T14:20:24.634+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-24T09:23:13.042+0800","caller":"discovery/resolver.go:146","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-24T11:17:18.230+0800","caller":"discovery/resolver.go:146","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-24T11:24:53.331+0800","caller":"login.service.v1/login_service.go:65","msg":"Register redis get error","error":"redis: nil"}
+{"level":"ERROR","time":"2024-12-24T11:25:12.504+0800","caller":"login.service.v1/login_service.go:65","msg":"Register redis get error","error":"redis: nil"}
+{"level":"ERROR","time":"2024-12-24T11:26:20.317+0800","caller":"login.service.v1/login_service.go:65","msg":"Register redis get error","error":"redis: nil"}
+{"level":"ERROR","time":"2024-12-24T11:26:42.117+0800","caller":"login.service.v1/login_service.go:65","msg":"Register redis get error","error":"redis: nil"}
+{"level":"ERROR","time":"2024-12-24T11:27:58.044+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-24T11:30:35.774+0800","caller":"login.service.v1/login_service.go:65","msg":"Register redis get error","error":"redis: nil"}
+{"level":"ERROR","time":"2024-12-24T11:30:35.774+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-24T11:34:26.195+0800","caller":"login.service.v1/login_service.go:65","msg":"Register redis get error","error":"redis: nil"}
+{"level":"ERROR","time":"2024-12-24T11:35:26.534+0800","caller":"login.service.v1/login_service.go:65","msg":"Register redis get error","error":"redis: nil"}
+{"level":"ERROR","time":"2024-12-24T11:35:26.542+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"etcdserver: requested lease not found"}
+{"level":"ERROR","time":"2024-12-24T11:35:33.813+0800","caller":"login.service.v1/login_service.go:65","msg":"Register redis get error","error":"redis: nil"}
+{"level":"ERROR","time":"2024-12-24T12:08:46.085+0800","caller":"login.service.v1/login_service.go:115","msg":"Register db SaveMember get error","error":"Error 1054 (42S22): Unknown column 'real_name' in 'field list'"}
+{"level":"ERROR","time":"2024-12-24T12:24:33.535+0800","caller":"login.service.v1/login_service.go:115","msg":"Register db SaveMember get error","error":"Error 1054 (42S22): Unknown column 'real_name' in 'field list'"}
+{"level":"ERROR","time":"2024-12-24T12:24:33.546+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"etcdserver: requested lease not found"}
+{"level":"ERROR","time":"2024-12-24T12:25:07.067+0800","caller":"login.service.v1/login_service.go:70","msg":"Register redis get error","error":"redis: nil"}
+{"level":"ERROR","time":"2024-12-24T12:25:54.640+0800","caller":"login.service.v1/login_service.go:115","msg":"Register db SaveMember get error","error":"Error 1054 (42S22): Unknown column 'real_name' in 'field list'"}
+{"level":"ERROR","time":"2024-12-24T12:25:57.672+0800","caller":"login.service.v1/login_service.go:115","msg":"Register db SaveMember get error","error":"Error 1054 (42S22): Unknown column 'real_name' in 'field list'"}
+{"level":"ERROR","time":"2024-12-25T16:38:10.076+0800","caller":"login.service.v1/login_service.go:138","msg":"Register db SaveOrganization get error","error":"Error 1406 (22001): Data too long for column 'avatar' at row 1"}
+{"level":"ERROR","time":"2024-12-25T16:40:14.140+0800","caller":"login.service.v1/login_service.go:125","msg":"Register db SaveMember get error","error":"sql: transaction has already been committed or rolled back"}
+{"level":"ERROR","time":"2024-12-25T16:45:24.429+0800","caller":"login.service.v1/login_service.go:138","msg":"Register db SaveOrganization get error","error":"Error 1406 (22001): Data too long for column 'avatar' at row 1"}
+{"level":"ERROR","time":"2024-12-25T16:45:43.765+0800","caller":"login.service.v1/login_service.go:138","msg":"Register db SaveOrganization get error","error":"Error 1406 (22001): Data too long for column 'avatar' at row 1"}
+{"level":"ERROR","time":"2024-12-25T16:46:12.541+0800","caller":"login.service.v1/login_service.go:138","msg":"Register db SaveOrganization get error","error":"Error 1406 (22001): Data too long for column 'avatar' at row 1"}
+{"level":"ERROR","time":"2024-12-25T16:51:48.268+0800","caller":"login.service.v1/login_service.go:88","msg":"Register db get error","error":"sql: transaction has already been committed or rolled back"}
+{"level":"ERROR","time":"2024-12-25T16:52:23.729+0800","caller":"login.service.v1/login_service.go:88","msg":"Register db get error","error":"sql: transaction has already been committed or rolled back"}
+{"level":"ERROR","time":"2024-12-26T15:21:03.405+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}

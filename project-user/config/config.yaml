@@ -1,0 +1,29 @@
+server:
+  name: "project-user"
+  addr: "127.0.0.1:8080"
+zap:
+  debugFileName: "C:\\Users\\17749\\GolandProjects\\project\\ms_project\\logs\\debug\\project-debug.log"
+  infoFileName: "C:\\Users\\17749\\GolandProjects\\project\\ms_project\\logs\\info\\project-info.log"
+  warnFileName: "C:\\Users\\17749\\GolandProjects\\project\\ms_project\\logs\\error\\project-error.log"
+  maxSize: 500
+  maxAge: 28
+  maxBackups: 3
+redis:
+  host: "localhost"
+  port: "6379"
+  password: ""
+  db: 0
+grpc:
+  addr: "127.0.0.1:8881"
+  name: "user"
+  version: "1.0.0"
+  weight: 2
+etcd:
+  addrs:
+    - "127.0.0.1:12379"
+mysql:
+  username: root
+  password: root
+  host: 127.0.0.1
+  port: 3309
+  db: msproject
