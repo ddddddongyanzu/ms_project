@@ -33,8 +33,10 @@ type Member struct {
 }
 
 type TokenList struct {
-	AccessToken  string `json:"accessToken"`
-	RefreshToken string `json:"refreshToken"`
+	AccessToken    string `json:"accessToken"`
+	RefreshToken   string `json:"refreshToken"`
+	TokenType      string `json:"tokenType"`
+	AccessTokenExp int64  `json:"accessTokenExp"`
 }
 
 type OrganizationList struct {

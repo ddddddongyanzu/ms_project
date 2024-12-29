@@ -42,3 +42,4 @@
 {"level":"ERROR","time":"2024-12-25T16:51:48.268+0800","caller":"login.service.v1/login_service.go:88","msg":"Register db get error","error":"sql: transaction has already been committed or rolled back"}
 {"level":"ERROR","time":"2024-12-25T16:52:23.729+0800","caller":"login.service.v1/login_service.go:88","msg":"Register db get error","error":"sql: transaction has already been committed or rolled back"}
 {"level":"ERROR","time":"2024-12-26T15:21:03.405+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-29T20:40:54.050+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}

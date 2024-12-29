@@ -67,3 +67,5 @@
 {"level":"INFO","time":"2024-12-26T15:05:42.368+0800","caller":"login.service.v1/login_service.go:54","msg":"短信平台调用成功， 发送短信 Info"}
 {"level":"ERROR","time":"2024-12-26T15:21:03.405+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
 {"level":"INFO","time":"2024-12-26T15:24:35.413+0800","caller":"login.service.v1/login_service.go:54","msg":"短信平台调用成功， 发送短信 Info"}
+{"level":"ERROR","time":"2024-12-29T20:40:54.050+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"INFO","time":"2024-12-29T21:06:11.041+0800","caller":"login.service.v1/login_service.go:56","msg":"短信平台调用成功， 发送短信 Info"}

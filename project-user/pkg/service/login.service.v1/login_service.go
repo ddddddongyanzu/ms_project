@@ -11,7 +11,9 @@ import (
 	common "test.com/project-common"
 	"test.com/project-common/encrypts"
 	"test.com/project-common/errs"
+	"test.com/project-common/jwts"
 	login "test.com/project-grpc/user/login"
+	"test.com/project-user/config"
 	"test.com/project-user/internal/dao"
 	"test.com/project-user/internal/data/member"
 	"test.com/project-user/internal/data/organization"
@@ -170,8 +172,19 @@ func (ls *LoginService) Login(ctx context.Context, msg *login.LoginMessage) (*lo
 	var orgsMessage []*login.OrganizationMessage
 	err = copier.Copy(&orgsMessage, orgs)
 	// 3. 使用jwt 生成 token
+	memIdStr := strconv.FormatInt(mem.Id, 10)
+	exp := 7 * 3600 * 24 * time.Second
+	rExp := 14 * 3600 * 24 * time.Second
+	token := jwts.CreateToken(memIdStr, exp, config.C.JwtConfig.AccessSecret, rExp, config.C.JwtConfig.RefreshSecret)
+	tokenList := &login.TokenMessage{
+		AccessToken:    token.AccessToken,
+		RefreshToken:   token.RefreshToken,
+		AccessTokenExp: token.AccessExp,
+		TokenType:      "bearer",
+	}
 	return &login.LoginResponse{
 		Member:           memMsg,
 		OrganizationList: orgsMessage,
+		TokenList:        tokenList,
 	}, nil
 }
