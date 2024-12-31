@@ -23,6 +23,7 @@ message RegisterResponse {
 message LoginMessage {
   string account = 1;
   string password = 2;
+  string token = 3;
 }
 
 message LoginResponse {
@@ -73,4 +74,5 @@ service LoginService {
   rpc GetCaptcha(CaptchaMessage) returns (CaptchaResponse) {}
   rpc Register(RegisterMessage) returns (RegisterResponse) {}
   rpc Login(LoginMessage) returns (LoginResponse) {}
+  rpc TokenVerify(LoginMessage) returns (LoginResponse) {}
 }

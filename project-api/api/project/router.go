@@ -3,6 +3,7 @@ package project
 import (
 	"github.com/gin-gonic/gin"
 	"log"
+	"test.com/project-api/api/midd"
 	"test.com/project-api/router"
 )
 
@@ -17,7 +18,9 @@ func init() {
 
 func (*RouterProject) Route(r *gin.Engine) {
 	// 初始化grpc的客户端连接
-	InitRpcUserClient()
+	InitRpcProjectClient()
 	h := New()
-	r.POST("/project/index", h.index)
+	group := r.Group("/project/index")
+	group.Use(midd.TokenVerify())
+	group.POST("", h.index)
 }

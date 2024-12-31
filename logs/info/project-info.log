@@ -68,3 +68,17 @@
 {"level":"INFO","time":"2024-12-26T15:24:35.413+0800","caller":"login.service.v1/login_service.go:54","msg":"短信平台调用成功， 发送短信 Info"}
 {"level":"ERROR","time":"2024-12-29T20:40:54.050+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
 {"level":"INFO","time":"2024-12-29T21:06:11.041+0800","caller":"login.service.v1/login_service.go:56","msg":"短信平台调用成功， 发送短信 Info"}
+{"level":"INFO","time":"2024-12-30T21:07:09.861+0800","caller":"login.service.v1/login_service.go:56","msg":"短信平台调用成功， 发送短信 Info"}
+{"level":"ERROR","time":"2024-12-31T12:17:31.656+0800","caller":"login.service.v1/login_service.go:157","msg":"Login db FindMember get error","error":"invalid connection"}
+{"level":"ERROR","time":"2024-12-31T20:44:24.122+0800","caller":"login.service.v1/login_service.go:200","msg":"Login TokenVerify get error","error":"token is malformed: token contains an invalid number of segments"}
+{"level":"ERROR","time":"2024-12-31T20:45:44.043+0800","caller":"login.service.v1/login_service.go:200","msg":"Login TokenVerify get error","error":"token is malformed: could not base64 decode header: illegal base64 data at input byte 6"}
+{"level":"ERROR","time":"2024-12-31T20:46:08.593+0800","caller":"login.service.v1/login_service.go:200","msg":"Login TokenVerify get error","error":"token is malformed: token contains an invalid number of segments"}
+{"level":"ERROR","time":"2024-12-31T20:47:44.033+0800","caller":"login.service.v1/login_service.go:200","msg":"Login TokenVerify get error","error":"token is malformed: token contains an invalid number of segments"}
+{"level":"ERROR","time":"2024-12-31T20:48:55.469+0800","caller":"login.service.v1/login_service.go:200","msg":"Login TokenVerify get error","error":"token is malformed: token contains an invalid number of segments"}
+{"level":"ERROR","time":"2024-12-31T20:49:06.887+0800","caller":"login.service.v1/login_service.go:200","msg":"Login TokenVerify get error","error":"token is malformed: token contains an invalid number of segments"}
+{"level":"ERROR","time":"2024-12-31T20:49:37.627+0800","caller":"login.service.v1/login_service.go:200","msg":"Login TokenVerify get error","error":"token is malformed: could not base64 decode header: illegal base64 data at input byte 6"}
+{"level":"ERROR","time":"2024-12-31T20:49:49.671+0800","caller":"login.service.v1/login_service.go:200","msg":"Login TokenVerify get error","error":"token is malformed: token contains an invalid number of segments"}
+{"level":"ERROR","time":"2024-12-31T20:50:53.314+0800","caller":"login.service.v1/login_service.go:200","msg":"Login TokenVerify get error","error":"token is malformed: could not base64 decode header: illegal base64 data at input byte 6"}
+{"level":"ERROR","time":"2024-12-31T20:51:09.004+0800","caller":"login.service.v1/login_service.go:200","msg":"Login TokenVerify get error","error":"token is malformed: could not base64 decode header: illegal base64 data at input byte 6"}
+{"level":"ERROR","time":"2024-12-31T20:53:40.742+0800","caller":"login.service.v1/login_service.go:200","msg":"Login TokenVerify get error","error":"token is malformed: could not base64 decode header: illegal base64 data at input byte 6"}
+{"level":"ERROR","time":"2024-12-31T20:53:42.491+0800","caller":"login.service.v1/login_service.go:200","msg":"Login TokenVerify get error","error":"token is malformed: could not base64 decode header: illegal base64 data at input byte 6"}

@@ -1,9 +1,9 @@
 package jwts
 
 import (
+	"errors"
 	"fmt"
 	"github.com/golang-jwt/jwt/v5"
-	"log"
 	"time"
 )
 
@@ -40,7 +40,7 @@ func CreateToken(val string, exp time.Duration, secret string, refreshExp time.D
 	}
 }
 
-func ParseToken(tokenString string, secret string) {
+func ParseToken(tokenString string, secret string) (string, error) {
 	// sample token string taken from the New example
 	//tokenString := "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmb28iOiJiYXIiLCJuYmYiOjE0NDQ0Nzg0MDB9.u1riaD1rW97opCoAuRCTy4w58Br-Zk-bh7vLiRIsrpU"
 
@@ -58,12 +58,17 @@ func ParseToken(tokenString string, secret string) {
 		return []byte(secret), nil
 	})
 	if err != nil {
-		log.Fatal(err)
+		return "", err
 	}
 
 	if claims, ok := token.Claims.(jwt.MapClaims); ok {
-		fmt.Printf("%v \n", claims)
+		val := claims["token"].(string)
+		exp := int64(claims["exp"].(float64))
+		if exp <= time.Now().Unix() {
+			return "", errors.New("token 过期了")
+		}
+		return val, nil
 	} else {
-		fmt.Println(err)
+		return "", err
 	}
 }
