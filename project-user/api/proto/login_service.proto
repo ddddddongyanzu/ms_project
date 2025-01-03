@@ -70,9 +70,17 @@ message TokenMessage {
   int64 accessTokenExp = 4;
 }
 
+message UserMessage{
+  int64 memId = 1;
+}
+message OrgListResponse{
+  repeated OrganizationMessage organizationList = 1;
+}
+
 service LoginService {
   rpc GetCaptcha(CaptchaMessage) returns (CaptchaResponse) {}
   rpc Register(RegisterMessage) returns (RegisterResponse) {}
   rpc Login(LoginMessage) returns (LoginResponse) {}
   rpc TokenVerify(LoginMessage) returns (LoginResponse) {}
+  rpc MyOrgList(UserMessage) returns (OrgListResponse) {}
 }

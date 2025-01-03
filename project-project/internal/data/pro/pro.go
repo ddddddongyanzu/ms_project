@@ -44,7 +44,7 @@ func (*ProjectMember) TableName() string {
 	return "ms_project_member"
 }
 
-type ProjectMemberUnion struct {
+type ProjectAndMember struct {
 	Project
 	ProjectCode int64
 	MemberCode  int64

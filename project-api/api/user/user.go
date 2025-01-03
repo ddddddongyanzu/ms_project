@@ -5,6 +5,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/jinzhu/copier"
 	"net/http"
+	"test.com/project-api/api/rpc"
 	"test.com/project-api/pkg/model/user"
 	common "test.com/project-common"
 	"test.com/project-common/errs"
@@ -25,7 +26,7 @@ func (*HandlerUser) getCaptcha(ctx *gin.Context) {
 	mobile := ctx.PostForm("mobile")
 	c, cancel := context.WithTimeout(context.Background(), 2*time.Second)
 	defer cancel()
-	rsp, err := LoginServiceClient.GetCaptcha(c, &login.CaptchaMessage{
+	rsp, err := rpc.LoginServiceClient.GetCaptcha(c, &login.CaptchaMessage{
 		Mobile: mobile,
 	})
 	if err != nil {
@@ -61,7 +62,7 @@ func (u *HandlerUser) register(ctx *gin.Context) {
 		ctx.JSON(http.StatusOK, result.Fail(http.StatusBadRequest, "copy有误"))
 		return
 	}
-	_, err = LoginServiceClient.Register(c, msg)
+	_, err = rpc.LoginServiceClient.Register(c, msg)
 	if err != nil {
 		code, msg := errs.ParseGrpcError(err)
 		ctx.JSON(http.StatusOK, result.Fail(code, msg))
@@ -91,7 +92,7 @@ func (u *HandlerUser) login(ctx *gin.Context) {
 		ctx.JSON(http.StatusOK, result.Fail(http.StatusBadRequest, "copy有误"))
 		return
 	}
-	loginRsp, err := LoginServiceClient.Login(c, msg)
+	loginRsp, err := rpc.LoginServiceClient.Login(c, msg)
 	if err != nil {
 		code, msg := errs.ParseGrpcError(err)
 		ctx.JSON(http.StatusOK, result.Fail(code, msg))
@@ -106,4 +107,23 @@ func (u *HandlerUser) login(ctx *gin.Context) {
 	}
 	// 3. 返回结果
 	ctx.JSON(http.StatusOK, result.Success(rsp))
+}
+
+func (u *HandlerUser) myOrgList(c *gin.Context) {
+	result := &common.Result{}
+	memberIdStr, _ := c.Get("memberId")
+	memberId := memberIdStr.(int64)
+	list, err2 := rpc.LoginServiceClient.MyOrgList(context.Background(), &login.UserMessage{MemId: memberId})
+	if err2 != nil {
+		code, msg := errs.ParseGrpcError(err2)
+		c.JSON(http.StatusOK, result.Fail(code, msg))
+		return
+	}
+	if list.OrganizationList == nil {
+		c.JSON(http.StatusOK, result.Success([]*user.OrganizationList{}))
+		return
+	}
+	var orgs []*user.OrganizationList
+	copier.Copy(&orgs, list.OrganizationList)
+	c.JSON(http.StatusOK, result.Success(orgs))
 }
