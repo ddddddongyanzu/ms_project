@@ -4,11 +4,23 @@ import (
 	"context"
 	"fmt"
 	"test.com/project-project/internal/data/pro"
+	"test.com/project-project/internal/database"
 	"test.com/project-project/internal/database/gorms"
 )
 
 type ProjectDao struct {
 	conn *gorms.GormConn
+}
+
+func (p *ProjectDao) SaveProject(conn database.DbConn, ctx context.Context, pr *pro.Project) error {
+	p.conn = conn.(*gorms.GormConn)
+	return p.conn.Tx(ctx).Save(&pr).Error
+}
+
+func (p *ProjectDao) SaveProjectMember(conn database.DbConn, ctx context.Context, pm *pro.ProjectMember) error {
+	p.conn = conn.(*gorms.GormConn)
+	return p.conn.Tx(ctx).Save(&pm).Error
+
 }
 
 func (p ProjectDao) FindCollectProjectByMemId(ctx context.Context, memberId int64, page int64, size int64) ([]*pro.ProjectAndMember, int64, error) {

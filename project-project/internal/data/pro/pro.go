@@ -16,7 +16,7 @@ type Project struct {
 	WhiteList          string
 	Sort               int
 	Deleted            int
-	TemplateCode       string
+	TemplateCode       int
 	Schedule           float64
 	CreateTime         int64
 	OrganizationCode   int64
@@ -43,7 +43,7 @@ type ProjectMember struct {
 	ProjectCode int64
 	MemberCode  int64
 	JoinTime    int64
-	isOwner     int64
+	IsOwner     int64
 	Authorize   string
 }
 

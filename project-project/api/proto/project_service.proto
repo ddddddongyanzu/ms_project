@@ -62,6 +62,16 @@ message ProjectMessage {
   int32 collected = 32;
 }
 
+message SaveProjectMessage {
+  int64 Id = 1;
+  string Cover = 2;
+  string Name = 3;
+  string Description = 4;
+  string Code = 5;
+  string CreateTime = 6;
+  string TaskBoardTheme = 7;
+  string OrganizationCode = 8;
+}
 message ProjectRpcMessage{
   int64 memberId = 1;
   string memberName = 2;
@@ -70,6 +80,10 @@ message ProjectRpcMessage{
   string selectBy = 5;
   string organizationCode = 6;
   int32 viewType = 7;
+  string name = 8;
+  string templateCode = 9;
+  string description = 10;
+  int64 id = 11;
 }
 
 message ProjectTemplateMessage{
@@ -108,4 +122,5 @@ service ProjectService {
   rpc Index(IndexMessage) returns (IndexResponse) {}
   rpc FindProjectByMemId(ProjectRpcMessage) returns (MyProjectResponse){}
   rpc FindProjectTemplate(ProjectRpcMessage) returns (ProjectTemplateResponse){}
+  rpc SaveProject(ProjectRpcMessage) returns (SaveProjectMessage){}
 }
