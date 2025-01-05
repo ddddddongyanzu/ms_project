@@ -93,3 +93,10 @@
 {"level":"ERROR","time":"2025-01-05T10:49:24.214+0800","caller":"project.service.v1/project_service.go:68","msg":"project FindProjectByMemId error","error":"Error 1054 (42S22): Unknown column 'archive' in 'where clause'"}
 {"level":"ERROR","time":"2025-01-05T10:49:24.973+0800","caller":"project.service.v1/project_service.go:68","msg":"project FindProjectByMemId error","error":"Error 1054 (42S22): Unknown column 'deleted' in 'where clause'"}
 {"level":"ERROR","time":"2025-01-05T10:49:25.324+0800","caller":"project.service.v1/project_service.go:68","msg":"project FindProjectByMemId error","error":"Error 1054 (42S22): Unknown column 'archive' in 'where clause'"}
+{"level":"ERROR","time":"2025-01-05T12:42:46.898+0800","caller":"project.service.v1/project_service.go:114","msg":"project FindProjectTemplate FindProjectTemplateSystem error","error":"unsupported data type: 0xc0002d2c90: Table not set, please set it like: db.Model(&user) or db.Table(\"users\")"}
+{"level":"ERROR","time":"2025-01-05T13:07:22.949+0800","caller":"project.service.v1/project_service.go:120","msg":"project FindProjectTemplate FindInProTemIds error","error":"context canceled"}
+{"level":"ERROR","time":"2025-01-05T13:09:22.400+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-05T13:10:11.896+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"etcdserver: requested lease not found"}
+{"level":"ERROR","time":"2025-01-05T13:10:21.948+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-05T13:10:38.431+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"etcdserver: requested lease not found"}
+{"level":"ERROR","time":"2025-01-05T13:11:27.903+0800","caller":"project.service.v1/project_service.go:120","msg":"project FindProjectTemplate FindInProTemIds error","error":"context canceled"}
