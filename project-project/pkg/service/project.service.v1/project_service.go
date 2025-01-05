@@ -49,7 +49,21 @@ func (p *ProjectService) FindProjectByMemId(ctx context.Context, msg *project.Pr
 	memberId := msg.MemberId
 	page := msg.Page
 	pageSize := msg.PageSize
-	pms, total, err := p.projectRepo.FindProjectByMemId(ctx, memberId, page, pageSize)
+	var pms []*pro.ProjectAndMember
+	var total int64
+	var err error
+	if msg.SelectBy == "" || msg.SelectBy == "my" {
+		pms, total, err = p.projectRepo.FindProjectByMemId(ctx, memberId, "", page, pageSize)
+	}
+	if msg.SelectBy == "archive" {
+		pms, total, err = p.projectRepo.FindProjectByMemId(ctx, memberId, "and archive = 1", page, pageSize)
+	}
+	if msg.SelectBy == "deleted" {
+		pms, total, err = p.projectRepo.FindProjectByMemId(ctx, memberId, "and deleted = 1", page, pageSize)
+	}
+	if msg.SelectBy == "collect" {
+		pms, total, err = p.projectRepo.FindCollectProjectByMemId(ctx, memberId, page, pageSize)
+	}
 	if err != nil {
 		zap.L().Error("project FindProjectByMemId error", zap.Error(err))
 		return nil, errs.GrpcError(model.DBError)
