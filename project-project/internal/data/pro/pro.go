@@ -67,8 +67,10 @@ type ProjectAndMember struct {
 	ProjectCode int64
 	MemberCode  int64
 	JoinTime    int64
-	isOwner     int64
+	IsOwner     int64
 	Authorize   string
+	OwnerName   string
+	Collected   int
 }
 
 func (m *ProjectAndMember) GetAccessControlType() string {

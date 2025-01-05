@@ -4,6 +4,7 @@ import (
 	"context"
 	"github.com/jinzhu/copier"
 	"go.uber.org/zap"
+	"log"
 	"strconv"
 	"test.com/project-common/encrypts"
 	"test.com/project-common/errs"
@@ -186,4 +187,37 @@ func (ps *ProjectService) SaveProject(ctx context.Context, msg *project.ProjectR
 		TaskBoardTheme:   pr.TaskBoardTheme,
 	}
 	return rsp, nil
+}
+
+// 1. 查项目表
+// 2. 项目和成员的关联表 查到项目的拥有者 去member表查名字
+// 3. 查收藏表 判断收藏状态
+func (ps *ProjectService) FindProjectDetail(ctx context.Context, msg *project.ProjectRpcMessage) (*project.ProjectDetailMessage, error) {
+	projectCodeStr, _ := encrypts.Decrypt(msg.ProjectCode, model.AESKey)
+	projectCode, _ := strconv.ParseInt(projectCodeStr, 10, 64)
+	memberId := msg.MemberId
+	c, cancel := context.WithTimeout(ctx, 2*time.Second)
+	defer cancel()
+	// 查项目表
+	projectAndMember, err := ps.projectRepo.FindProjectByPIdAndMemId(ctx, projectCode, memberId)
+	if err != nil {
+		zap.L().Error("project SaveProject FindProjectByPIdAndMemId error", zap.Error(err))
+		return nil, errs.GrpcError(model.DBError)
+	}
+	ownerId := projectAndMember.IsOwner
+	// 去user模块找
+	log.Println(ownerId)
+	// TODO 优化 收藏的时候放入redis
+	isCollectd, err := ps.projectRepo.FindCollectByPidAndMemId(c, projectCode, memberId)
+	if err != nil {
+		zap.L().Error("project SaveProject FindCollectByPidAndMemId error", zap.Error(err))
+		return nil, errs.GrpcError(model.DBError)
+	}
+	if isCollectd {
+		projectAndMember.Collected = model.Collected
+	}
+	var detailMsg = &project.ProjectDetailMessage{}
+	copier.Copy(detailMsg, projectAndMember)
+	detailMsg.OwnerAvatar = ""
+	return detailMsg, nil
 }

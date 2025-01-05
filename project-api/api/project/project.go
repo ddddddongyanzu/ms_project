@@ -137,3 +137,20 @@ func (p *HandlerProject) projectSave(c *gin.Context) {
 	copier.Copy(&rsp, saveProject)
 	c.JSON(http.StatusOK, result.Success(rsp))
 }
+
+func (p *HandlerProject) readProject(c *gin.Context) {
+	result := &common.Result{}
+	projectCode := c.PostForm("projectCode")
+	memberId := c.GetInt64("memberId")
+
+	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
+	defer cancel()
+	detail, err := ProjectServiceClient.FindProjectDetail(ctx, &project.ProjectRpcMessage{ProjectCode: projectCode, MemberId: memberId})
+	if err != nil {
+		code, msg := errs.ParseGrpcError(err)
+		c.JSON(http.StatusOK, result.Fail(code, msg))
+	}
+	pd := &pro.ProjectDetail{}
+	copier.Copy(pd, detail)
+	c.JSON(http.StatusOK, result.Success(pd))
+}
