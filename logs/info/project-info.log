@@ -111,3 +111,10 @@
 {"level":"ERROR","time":"2025-01-05T21:10:27.224+0800","caller":"project.service.v1/project_service.go:212","msg":"project SaveProject FindCollectByPidAndMemId error","error":"sql: expected 2 arguments, got 3"}
 {"level":"ERROR","time":"2025-01-05T21:11:04.188+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
 {"level":"ERROR","time":"2025-01-05T21:11:56.271+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-06T08:56:25.338+0800","caller":"login.service.v1/login_service.go:222","msg":"TokenVerify db FindMemberById get error","error":"invalid connection"}
+{"level":"ERROR","time":"2025-01-06T08:56:25.338+0800","caller":"login.service.v1/login_service.go:222","msg":"TokenVerify db FindMemberById get error","error":"invalid connection"}
+{"level":"ERROR","time":"2025-01-06T08:56:28.355+0800","caller":"project.service.v1/project_service.go:77","msg":"project FindProjectByMemId error","error":"invalid connection"}
+{"level":"ERROR","time":"2025-01-06T19:55:20.908+0800","caller":"project.service.v1/project_service.go:205","msg":"project FindProjectDetail FindProjectByPIdAndMemId error","error":"context canceled"}
+{"level":"ERROR","time":"2025-01-06T19:55:20.909+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-06T19:55:55.964+0800","caller":"project.service.v1/project_service.go:205","msg":"project FindProjectDetail FindProjectByPIdAndMemId error","error":"context canceled"}
+{"level":"ERROR","time":"2025-01-06T20:06:51.661+0800","caller":"project.service.v1/project_service.go:213","msg":"project rpc FindProjectDetail FindMemberInfoById error","error":"rpc error: code = DeadlineExceeded desc = context deadline exceeded"}

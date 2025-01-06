@@ -4,12 +4,12 @@ import (
 	"context"
 	"github.com/jinzhu/copier"
 	"go.uber.org/zap"
-	"log"
 	"strconv"
 	"test.com/project-common/encrypts"
 	"test.com/project-common/errs"
 	"test.com/project-common/tms"
 	project "test.com/project-grpc/project"
+	"test.com/project-grpc/user/login"
 	"test.com/project-project/internal/dao"
 	"test.com/project-project/internal/data/menu"
 	"test.com/project-project/internal/data/pro"
@@ -17,6 +17,7 @@ import (
 	"test.com/project-project/internal/database"
 	"test.com/project-project/internal/database/tran"
 	"test.com/project-project/internal/repo"
+	"test.com/project-project/internal/rpc"
 	"test.com/project-project/pkg/model"
 	"time"
 )
@@ -201,12 +202,19 @@ func (ps *ProjectService) FindProjectDetail(ctx context.Context, msg *project.Pr
 	// 查项目表
 	projectAndMember, err := ps.projectRepo.FindProjectByPIdAndMemId(ctx, projectCode, memberId)
 	if err != nil {
-		zap.L().Error("project SaveProject FindProjectByPIdAndMemId error", zap.Error(err))
+		zap.L().Error("project FindProjectDetail FindProjectByPIdAndMemId error", zap.Error(err))
 		return nil, errs.GrpcError(model.DBError)
 	}
 	ownerId := projectAndMember.IsOwner
+	member, err := rpc.LoginServiceClient.FindMemberInfoById(c, &login.UserMessage{
+		MemId: ownerId,
+	})
+	if err != nil {
+		zap.L().Error("project rpc FindProjectDetail FindMemberInfoById error", zap.Error(err))
+		return nil, err
+	}
 	// 去user模块找
-	log.Println(ownerId)
+
 	// TODO 优化 收藏的时候放入redis
 	isCollectd, err := ps.projectRepo.FindCollectByPidAndMemId(c, projectCode, memberId)
 	if err != nil {
@@ -218,6 +226,12 @@ func (ps *ProjectService) FindProjectDetail(ctx context.Context, msg *project.Pr
 	}
 	var detailMsg = &project.ProjectDetailMessage{}
 	copier.Copy(detailMsg, projectAndMember)
-	detailMsg.OwnerAvatar = ""
+	detailMsg.OwnerAvatar = member.Avatar
+	detailMsg.OwnerName = member.Name
+	detailMsg.Code, _ = encrypts.EncryptInt64(projectAndMember.Id, model.AESKey)
+	detailMsg.AccessControlType = projectAndMember.GetAccessControlType()
+	detailMsg.OrganizationCode, _ = encrypts.EncryptInt64(projectAndMember.OrganizationCode, model.AESKey)
+	detailMsg.Order = int32(projectAndMember.Sort)
+	detailMsg.CreateTime = tms.FormatByMill(projectAndMember.CreateTime)
 	return detailMsg, nil
 }
