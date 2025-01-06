@@ -12,6 +12,17 @@ type ProjectDao struct {
 	conn *gorms.GormConn
 }
 
+func (p *ProjectDao) UpdateDeletedProject(ctx context.Context, code int64, deleted bool) error {
+	session := p.conn.Session(ctx)
+	var err error
+	if deleted {
+		err = session.Model(&pro.Project{}).Where("id=?", code).Update("deleted", 1).Error
+	} else {
+		err = session.Model(&pro.Project{}).Where("id=?", code).Update("deleted", 0).Error
+	}
+	return err
+}
+
 func (p *ProjectDao) FindProjectByPIdAndMemId(ctx context.Context, projectCode int64, memberId int64) (*pro.ProjectAndMember, error) {
 	var pms *pro.ProjectAndMember
 	session := p.conn.Session(ctx)
