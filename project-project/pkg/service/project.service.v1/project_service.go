@@ -73,6 +73,24 @@ func (p *ProjectService) FindProjectByMemId(ctx context.Context, msg *project.Pr
 	}
 	if msg.SelectBy == "collect" {
 		pms, total, err = p.projectRepo.FindCollectProjectByMemId(ctx, memberId, page, pageSize)
+		for _, v := range pms {
+			v.Collected = model.Collected
+		}
+	} else {
+		collectPms, _, err := p.projectRepo.FindCollectProjectByMemId(ctx, memberId, page, pageSize)
+		if err != nil {
+			zap.L().Error("project FindProjectByMemId FindCollectProjectByMemId error", zap.Error(err))
+			return nil, errs.GrpcError(model.DBError)
+		}
+		var cMap = make(map[int64]*pro.ProjectAndMember)
+		for _, v := range collectPms {
+			cMap[v.Id] = v
+		}
+		for _, v := range pms {
+			if cMap[v.ProjectCode] != nil {
+				v.Collected = model.Collected
+			}
+		}
 	}
 	if err != nil {
 		zap.L().Error("project FindProjectByMemId error", zap.Error(err))
@@ -84,7 +102,8 @@ func (p *ProjectService) FindProjectByMemId(ctx context.Context, msg *project.Pr
 	var pmm []*project.ProjectMessage
 	copier.Copy(&pmm, pms)
 	for _, v := range pmm {
-		v.Code, _ = encrypts.EncryptInt64(v.Id, model.AESKey)
+		// 修复Bug
+		v.Code, _ = encrypts.EncryptInt64(v.ProjectCode, model.AESKey)
 		pam := pro.ToMap(pms)[v.Id]
 		v.AccessControlType = pam.GetAccessControlType()
 		v.OrganizationCode, _ = encrypts.EncryptInt64(pam.OrganizationCode, model.AESKey)
@@ -197,10 +216,10 @@ func (ps *ProjectService) FindProjectDetail(ctx context.Context, msg *project.Pr
 	projectCodeStr, _ := encrypts.Decrypt(msg.ProjectCode, model.AESKey)
 	projectCode, _ := strconv.ParseInt(projectCodeStr, 10, 64)
 	memberId := msg.MemberId
-	c, cancel := context.WithTimeout(ctx, 2*time.Second)
+	c, cancel := context.WithTimeout(context.Background(), 2*time.Second)
 	defer cancel()
 	// 查项目表
-	projectAndMember, err := ps.projectRepo.FindProjectByPIdAndMemId(ctx, projectCode, memberId)
+	projectAndMember, err := ps.projectRepo.FindProjectByPIdAndMemId(c, projectCode, memberId)
 	if err != nil {
 		zap.L().Error("project FindProjectDetail FindProjectByPIdAndMemId error", zap.Error(err))
 		return nil, errs.GrpcError(model.DBError)
@@ -239,7 +258,7 @@ func (ps *ProjectService) FindProjectDetail(ctx context.Context, msg *project.Pr
 func (ps *ProjectService) UpdateDeletedProject(ctx context.Context, msg *project.ProjectRpcMessage) (*project.DeletedProjectResponse, error) {
 	projectCodeStr, _ := encrypts.Decrypt(msg.ProjectCode, model.AESKey)
 	projectCode, _ := strconv.ParseInt(projectCodeStr, 10, 64)
-	c, cancel := context.WithTimeout(ctx, 2*time.Second)
+	c, cancel := context.WithTimeout(context.Background(), 2*time.Second)
 	defer cancel()
 	err := ps.projectRepo.UpdateDeletedProject(c, projectCode, msg.Deleted)
 	if err != nil {
@@ -247,4 +266,31 @@ func (ps *ProjectService) UpdateDeletedProject(ctx context.Context, msg *project
 		return nil, errs.GrpcError(model.DBError)
 	}
 	return &project.DeletedProjectResponse{}, nil
+}
+
+func (ps *ProjectService) UpdateProject(ctx context.Context, msg *project.UpdateProjectMessage) (*project.UpdateProjectResponse, error) {
+	projectCodeStr, _ := encrypts.Decrypt(msg.ProjectCode, model.AESKey)
+	projectCode, _ := strconv.ParseInt(projectCodeStr, 10, 64)
+	c, cancel := context.WithTimeout(context.Background(), 2*time.Second)
+	defer cancel()
+	proj := &pro.Project{
+		Id:                 projectCode,
+		Name:               msg.Name,
+		Description:        msg.Description,
+		Cover:              msg.Cover,
+		TaskBoardTheme:     msg.TaskBoardTheme,
+		Prefix:             msg.Prefix,
+		Private:            int(msg.Private),
+		OpenPrefix:         int(msg.OpenPrefix),
+		OpenBeginTime:      int(msg.OpenBeginTime),
+		OpenTaskPrivate:    int(msg.OpenTaskPrivate),
+		Schedule:           msg.Schedule,
+		AutoUpdateSchedule: int(msg.AutoUpdateSchedule),
+	}
+	err := ps.projectRepo.UpdateProject(c, proj)
+	if err != nil {
+		zap.L().Error("project UpdateProject UpdateDeletedProject error", zap.Error(err))
+		return nil, errs.GrpcError(model.DBError)
+	}
+	return &project.UpdateProjectResponse{}, nil
 }

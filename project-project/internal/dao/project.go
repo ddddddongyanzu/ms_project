@@ -12,6 +12,18 @@ type ProjectDao struct {
 	conn *gorms.GormConn
 }
 
+func (p *ProjectDao) UpdateProject(ctx context.Context, proj *pro.Project) error {
+	return p.conn.Session(ctx).Updates(&proj).Error
+}
+
+func (p *ProjectDao) DeleteProjectCollect(ctx context.Context, memId int64, projectCode int64) error {
+	return p.conn.Session(ctx).Where("member_code=? and project_code=?", memId, projectCode).Delete(&pro.ProjectCollection{}).Error
+}
+
+func (p *ProjectDao) SaveCollectProject(ctx context.Context, pc *pro.ProjectCollection) error {
+	return p.conn.Session(ctx).Save(&pc).Error
+}
+
 func (p *ProjectDao) UpdateDeletedProject(ctx context.Context, code int64, deleted bool) error {
 	session := p.conn.Session(ctx)
 	var err error
@@ -26,7 +38,7 @@ func (p *ProjectDao) UpdateDeletedProject(ctx context.Context, code int64, delet
 func (p *ProjectDao) FindProjectByPIdAndMemId(ctx context.Context, projectCode int64, memberId int64) (*pro.ProjectAndMember, error) {
 	var pms *pro.ProjectAndMember
 	session := p.conn.Session(ctx)
-	sql := fmt.Sprintf("select * from ms_project a, ms_project_member b where a.id = b.project_code and b.member_code=? and b.project_code= ? LIMIT 1")
+	sql := fmt.Sprintf("select a.*,b.project_code,b.member_code,b.join_time,b.is_owner,b.authorize from ms_project a, ms_project_member b where a.id = b.project_code and b.member_code=? and b.project_code= ? LIMIT 1")
 	raw := session.Raw(sql, memberId, projectCode)
 	err := raw.Scan(&pms).Error
 	return pms, err

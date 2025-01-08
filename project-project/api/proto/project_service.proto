@@ -116,6 +116,7 @@ message ProjectRpcMessage{
   int64 id = 11;
   string projectCode = 12;
   bool deleted = 13;
+  string collectType = 14;
 }
 
 message ProjectTemplateMessage{
@@ -151,6 +152,24 @@ message ProjectTemplateResponse{
 }
 
 message DeletedProjectResponse{}
+message CollectProjectResponse{}
+message UpdateProjectResponse{}
+
+message UpdateProjectMessage {
+  string projectCode = 1;
+  string Cover = 2;
+  string Name = 3;
+  string Description = 4;
+  double Schedule = 5;
+  int32 Private = 6;
+  string Prefix = 7;
+  int32 OpenPrefix = 8;
+  int32 OpenBeginTime = 9;
+  int32 OpenTaskPrivate = 10;
+  string TaskBoardTheme = 11;
+  int32 AutoUpdateSchedule = 12;
+  int64 MemberId = 13;
+}
 
 service ProjectService {
   rpc Index(IndexMessage) returns (IndexResponse) {}
@@ -159,4 +178,6 @@ service ProjectService {
   rpc SaveProject(ProjectRpcMessage) returns (SaveProjectMessage){}
   rpc FindProjectDetail(ProjectRpcMessage) returns (ProjectDetailMessage){}
   rpc UpdateDeletedProject(ProjectRpcMessage) returns (DeletedProjectResponse){}
+  rpc UpdateCollectProject(ProjectRpcMessage) returns (CollectProjectResponse){}
+  rpc UpdateProject(UpdateProjectMessage) returns (UpdateProjectResponse){}
 }

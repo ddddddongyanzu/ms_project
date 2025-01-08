@@ -92,3 +92,25 @@
 {"level":"ERROR","time":"2025-01-06T19:55:20.909+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
 {"level":"ERROR","time":"2025-01-06T19:55:55.964+0800","caller":"project.service.v1/project_service.go:205","msg":"project FindProjectDetail FindProjectByPIdAndMemId error","error":"context canceled"}
 {"level":"ERROR","time":"2025-01-06T20:06:51.661+0800","caller":"project.service.v1/project_service.go:213","msg":"project rpc FindProjectDetail FindMemberInfoById error","error":"rpc error: code = DeadlineExceeded desc = context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-06T22:51:50.466+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-06T22:51:50.466+0800","caller":"project.service.v1/project_collect.go:30","msg":"project UpdateCollectProject SaveCollectProject error","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-06T22:52:05.946+0800","caller":"project.service.v1/project_collect.go:30","msg":"project UpdateCollectProject SaveCollectProject error","error":"context canceled"}
+{"level":"ERROR","time":"2025-01-07T09:53:40.821+0800","caller":"project.service.v1/project_service.go:190","msg":"project SaveProject SaveProjectMember error","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-07T09:53:40.822+0800","caller":"discovery/resolver.go:146","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-07T09:53:40.822+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-07T09:54:24.896+0800","caller":"project.service.v1/project_service.go:190","msg":"project SaveProject SaveProjectMember error","error":"context canceled"}
+{"level":"ERROR","time":"2025-01-07T11:10:26.368+0800","caller":"discovery/resolver.go:146","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-08T09:27:34.905+0800","caller":"login.service.v1/login_service.go:222","msg":"TokenVerify db FindMemberById get error","error":"invalid connection"}
+{"level":"ERROR","time":"2025-01-08T09:27:45.543+0800","caller":"login.service.v1/login_service.go:222","msg":"TokenVerify db FindMemberById get error","error":"invalid connection"}
+{"level":"ERROR","time":"2025-01-08T09:27:45.587+0800","caller":"project.service.v1/project_service.go:136","msg":"project FindProjectTemplate FindProjectTemplateSystem error","error":"invalid connection"}
+{"level":"ERROR","time":"2025-01-08T09:48:13.637+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-08T09:48:14.484+0800","caller":"project.service.v1/project_collect.go:33","msg":"project UpdateCollectProject SaveCollectProject error","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-08T09:48:42.828+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-08T09:51:12.270+0800","caller":"project.service.v1/project_collect.go:33","msg":"project UpdateCollectProject SaveCollectProject error","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-08T09:51:12.281+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"etcdserver: requested lease not found"}
+{"level":"ERROR","time":"2025-01-08T09:51:26.592+0800","caller":"project.service.v1/project_collect.go:33","msg":"project UpdateCollectProject SaveCollectProject error","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-08T10:13:34.817+0800","caller":"project.service.v1/project_collect.go:33","msg":"project UpdateCollectProject SaveCollectProject error","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-08T11:23:16.426+0800","caller":"project.service.v1/project_service.go:137","msg":"project FindProjectTemplate FindProjectTemplateSystem error","error":"context canceled"}
+{"level":"ERROR","time":"2025-01-08T11:23:16.426+0800","caller":"project.service.v1/project_service.go:82","msg":"project FindProjectByMemId FindCollectProjectByMemId error","error":"context canceled"}
+{"level":"ERROR","time":"2025-01-08T11:32:31.632+0800","caller":"project.service.v1/project_collect.go:33","msg":"project UpdateCollectProject SaveCollectProject error","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-08T11:32:50.319+0800","caller":"project.service.v1/project_collect.go:33","msg":"project UpdateCollectProject SaveCollectProject error","error":"context deadline exceeded"}
