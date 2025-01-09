@@ -213,3 +213,12 @@
 {"level":"INFO","time":"2025-01-09T15:30:00.288+0800","caller":"interceptor/cache.go:40","msg":"/project.service.v1.ProjectService/FindProjectByMemId走了缓存"}
 {"level":"INFO","time":"2025-01-09T15:30:58.522+0800","caller":"interceptor/cache.go:46","msg":"/project.service.v1.ProjectService/FindProjectByMemId放入缓存"}
 {"level":"INFO","time":"2025-01-09T15:31:13.013+0800","caller":"interceptor/cache.go:40","msg":"/project.service.v1.ProjectService/FindProjectByMemId走了缓存"}
+{"level":"INFO","time":"2025-01-09T16:20:29.133+0800","caller":"interceptor/cache.go:46","msg":"/project.service.v1.ProjectService/FindProjectByMemId放入缓存"}
+{"level":"INFO","time":"2025-01-09T16:20:29.567+0800","caller":"interceptor/cache.go:46","msg":"/project.service.v1.ProjectService/FindProjectByMemId放入缓存"}
+{"level":"INFO","time":"2025-01-09T16:21:26.805+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemberInfoById放入缓存"}
+{"level":"INFO","time":"2025-01-09T16:21:26.814+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemberInfoById放入缓存"}
+{"level":"INFO","time":"2025-01-09T16:21:26.823+0800","caller":"interceptor/cache.go:46","msg":"/project.service.v1.ProjectService/FindProjectByMemId放入缓存"}
+{"level":"INFO","time":"2025-01-09T16:24:14.203+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/MyOrgList放入缓存"}
+{"level":"INFO","time":"2025-01-09T16:24:14.205+0800","caller":"interceptor/cache.go:41","msg":"/login.service.v1.LoginService/FindMemberInfoById走了缓存"}
+{"level":"INFO","time":"2025-01-09T16:24:14.212+0800","caller":"interceptor/cache.go:41","msg":"/login.service.v1.LoginService/FindMemberInfoById走了缓存"}
+{"level":"INFO","time":"2025-01-09T16:24:14.228+0800","caller":"interceptor/cache.go:40","msg":"/project.service.v1.ProjectService/FindProjectByMemId走了缓存"}
