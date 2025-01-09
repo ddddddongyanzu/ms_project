@@ -86,6 +86,19 @@ func (m *ProjectAndMember) GetAccessControlType() string {
 	return ""
 }
 
+func (m *Project) GetAccessControlType() string {
+	if m.AccessControlType == 0 {
+		return "open"
+	}
+	if m.AccessControlType == 1 {
+		return "private"
+	}
+	if m.AccessControlType == 2 {
+		return "custom"
+	}
+	return ""
+}
+
 func ToMap(orgs []*ProjectAndMember) map[int64]*ProjectAndMember {
 	m := make(map[int64]*ProjectAndMember)
 	for _, v := range orgs {

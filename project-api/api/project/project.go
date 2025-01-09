@@ -203,8 +203,8 @@ func (p *HandlerProject) editProject(c *gin.Context) {
 	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
 	defer cancel()
 	msg := &project.UpdateProjectMessage{}
-	msg.MemberId = memberId
 	copier.Copy(msg, req)
+	msg.MemberId = memberId
 	_, err := ProjectServiceClient.UpdateProject(ctx, msg)
 	if err != nil {
 		code, msg := errs.ParseGrpcError(err)
