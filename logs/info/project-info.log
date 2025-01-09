@@ -143,3 +143,12 @@
 {"level":"ERROR","time":"2025-01-09T10:22:56.682+0800","caller":"login.service.v1/login_service.go:242","msg":"TokenVerify cache get MemberOrganization get error","error":"redis: nil"}
 {"level":"ERROR","time":"2025-01-09T10:23:17.764+0800","caller":"project.service.v1/project_service.go:49","msg":"Index db FindMenus get error","error":"invalid connection"}
 {"level":"INFO","time":"2025-01-09T10:34:31.578+0800","caller":"login.service.v1/login_service.go:59","msg":"短信平台调用成功， 发送短信 Info"}
+{"level":"INFO","time":"2025-01-09T11:43:20.358+0800","caller":"interceptor/cache.go:46","msg":"/login.service.v1.LoginService/MyOrgList放入缓存"}
+{"level":"INFO","time":"2025-01-09T11:43:26.427+0800","caller":"interceptor/cache.go:40","msg":"/login.service.v1.LoginService/MyOrgList走了缓存"}
+{"level":"INFO","time":"2025-01-09T11:45:28.613+0800","caller":"interceptor/cache.go:41","msg":"/login.service.v1.LoginService/MyOrgList走了缓存"}
+{"level":"INFO","time":"2025-01-09T11:45:39.844+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemberInfoById放入缓存"}
+{"level":"INFO","time":"2025-01-09T11:45:45.117+0800","caller":"interceptor/cache.go:41","msg":"/login.service.v1.LoginService/FindMemberInfoById走了缓存"}
+{"level":"INFO","time":"2025-01-09T11:54:12.429+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/MyOrgList放入缓存"}
+{"level":"INFO","time":"2025-01-09T11:54:12.467+0800","caller":"interceptor/cache.go:46","msg":"/project.service.v1.ProjectService/FindProjectByMemId放入缓存"}
+{"level":"INFO","time":"2025-01-09T11:54:20.328+0800","caller":"interceptor/cache.go:41","msg":"/login.service.v1.LoginService/MyOrgList走了缓存"}
+{"level":"INFO","time":"2025-01-09T11:54:20.328+0800","caller":"interceptor/cache.go:40","msg":"/project.service.v1.ProjectService/FindProjectByMemId走了缓存"}

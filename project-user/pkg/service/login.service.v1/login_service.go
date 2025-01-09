@@ -3,6 +3,7 @@ package login_service_v1
 import (
 	"context"
 	"encoding/json"
+	"fmt"
 	"github.com/go-redis/redis/v8"
 	"github.com/jinzhu/copier"
 	"go.uber.org/zap"
@@ -258,6 +259,7 @@ func (ls *LoginService) TokenVerify(ctx context.Context, msg *login.LoginMessage
 }
 
 func (ls *LoginService) MyOrgList(ctx context.Context, msg *login.UserMessage) (*login.OrgListResponse, error) {
+	fmt.Println("MyOrgList")
 	memId := msg.MemId
 	orgs, err := ls.organizationRepo.FindOrganizationRepoByMemId(ctx, memId)
 	if err != nil {
