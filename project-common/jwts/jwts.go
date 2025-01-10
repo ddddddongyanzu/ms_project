@@ -3,7 +3,7 @@ package jwts
 import (
 	"errors"
 	"fmt"
-	"github.com/golang-jwt/jwt/v5"
+	"github.com/golang-jwt/jwt/v4"
 	"time"
 )
 
@@ -14,24 +14,20 @@ type JwtToken struct {
 	RefreshExp   int64
 }
 
-func CreateToken(val string, exp time.Duration, secret string, refreshExp time.Duration, refreshSecret string) *JwtToken {
-	// Create a new token object, specifying signing method and the claims
-	// you would like it to contain.
+func CreateToken(val string, exp time.Duration, secret string, refreshExp time.Duration, refreshSecret string, ip string) *JwtToken {
 	aExp := time.Now().Add(exp).Unix()
 	accessToken := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
 		"token": val,
 		"exp":   aExp,
+		"ip":    ip,
 	})
-	// Sign and get the complete encoded token as a string using the secret
 	aToken, _ := accessToken.SignedString([]byte(secret))
 	rExp := time.Now().Add(refreshExp).Unix()
 	refreshToken := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
 		"token": val,
-		"exp":   rExp,
+		"exp":   aExp,
 	})
-	// Sign and get the complete encoded token as a string using the secret
 	rToken, _ := refreshToken.SignedString([]byte(refreshSecret))
-
 	return &JwtToken{
 		AccessExp:    aExp,
 		AccessToken:  aToken,
@@ -40,14 +36,7 @@ func CreateToken(val string, exp time.Duration, secret string, refreshExp time.D
 	}
 }
 
-func ParseToken(tokenString string, secret string) (string, error) {
-	// sample token string taken from the New example
-	//tokenString := "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmb28iOiJiYXIiLCJuYmYiOjE0NDQ0Nzg0MDB9.u1riaD1rW97opCoAuRCTy4w58Br-Zk-bh7vLiRIsrpU"
-
-	// Parse takes the token string and a function for looking up the key. The latter is especially
-	// useful if you use multiple keys for your application.  The standard is to use 'kid' in the
-	// head of the token to identify which key to use, but the parsed token (head and claims) is provided
-	// to the callback, providing flexibility.
+func ParseToken(tokenString string, secret string, ip string) (string, error) {
 	token, err := jwt.Parse(tokenString, func(token *jwt.Token) (interface{}, error) {
 		// Don't forget to validate the alg is what you expect:
 		if _, ok := token.Method.(*jwt.SigningMethodHMAC); !ok {
@@ -60,12 +49,14 @@ func ParseToken(tokenString string, secret string) (string, error) {
 	if err != nil {
 		return "", err
 	}
-
-	if claims, ok := token.Claims.(jwt.MapClaims); ok {
+	if claims, ok := token.Claims.(jwt.MapClaims); ok && token.Valid {
 		val := claims["token"].(string)
 		exp := int64(claims["exp"].(float64))
 		if exp <= time.Now().Unix() {
-			return "", errors.New("token 过期了")
+			return "", errors.New("token过期了")
+		}
+		if claims["ip"] != ip {
+			return "", errors.New("ip不合法")
 		}
 		return val, nil
 	} else {

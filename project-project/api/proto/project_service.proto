@@ -2,8 +2,8 @@ syntax = "proto3";
 package project.service.v1;
 option go_package = "project-project/pkg/service/project.service.v1";
 
-message IndexMessage {
-  string token = 1;
+message IndexMessage{
+
 }
 
 message MenuMessage {
@@ -27,7 +27,11 @@ message MenuMessage {
   repeated MenuMessage children = 18;
 }
 
-message ProjectMessage {
+message IndexResponse{
+  repeated MenuMessage menus = 1;
+}
+
+message ProjectMessage{
   int64 Id = 1;
   string Cover = 2;
   string Name = 3;
@@ -62,7 +66,7 @@ message ProjectMessage {
   int32 collected = 32;
 }
 
-message ProjectDetailMessage {
+message ProjectDetailMessage{
   string Cover = 2;
   string Name = 3;
   string Description = 4;
@@ -137,25 +141,21 @@ message TaskStages{
   string name = 1;
 }
 
-message MyProjectResponse{
-  repeated ProjectMessage pm = 1;
-  int64 total = 2;
-}
-
-message IndexResponse {
-  repeated MenuMessage menus = 1;
-}
-
 message ProjectTemplateResponse{
   repeated ProjectTemplateMessage ptm = 1;
   int64  Total = 2;
 }
 
+message MyProjectResponse{
+  repeated ProjectMessage pm = 1;
+  int64 total = 2;
+}
 message DeletedProjectResponse{}
 message CollectProjectResponse{}
 message UpdateProjectResponse{}
 
-message UpdateProjectMessage {
+
+message UpdateProjectMessage{
   string projectCode = 1;
   string Cover = 2;
   string Name = 3;
@@ -171,6 +171,24 @@ message UpdateProjectMessage {
   int64 MemberId = 13;
 }
 
+message ProjectLogMessage{
+  string Content  = 1;
+  string Remark       = 2;
+  string CreateTime    = 3;
+  string SourceCode    = 4;
+  int32 IsComment       = 5;
+  string ProjectCode   = 6;
+  string ProjectName   =7;
+  string MemberAvatar  =8;
+  string MemberName   =9;
+  string TaskName      = 10;
+}
+
+message ProjectLogResponse{
+  repeated ProjectLogMessage list = 1;
+  int64 total = 2;
+}
+
 service ProjectService {
   rpc Index(IndexMessage) returns (IndexResponse) {}
   rpc FindProjectByMemId(ProjectRpcMessage) returns (MyProjectResponse){}
@@ -180,4 +198,5 @@ service ProjectService {
   rpc UpdateDeletedProject(ProjectRpcMessage) returns (DeletedProjectResponse){}
   rpc UpdateCollectProject(ProjectRpcMessage) returns (CollectProjectResponse){}
   rpc UpdateProject(UpdateProjectMessage) returns (UpdateProjectResponse){}
+  rpc GetLogBySelfProject(ProjectRpcMessage) returns (ProjectLogResponse){}
 }

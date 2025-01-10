@@ -64,7 +64,6 @@ func toChild(childPmcs []*ProjectMenuChild, pmcs []*ProjectMenuChild) {
 		toChild(pmc.Children, pmcs)
 	}
 }
-
 func getFullUrl(url string, params string, values string) string {
 	if (params != "" && values != "") || values != "" {
 		return url + "/" + values

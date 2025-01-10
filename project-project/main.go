@@ -9,16 +9,16 @@ import (
 
 func main() {
 	r := gin.Default()
-	// 路由
+	//路由
 	router.InitRouter(r)
-	// grpc 服务注册
-	grpc := router.RegisterGrpc()
-	// grpc 服务注册到 etcd
+	//grpc服务注册
+	gc := router.RegisterGrpc()
+	//grpc服务注册到etcd
 	router.RegisterEtcdServer()
 	stop := func() {
-		grpc.Stop()
+		gc.Stop()
 	}
-	// 初始化 rpc 调用
+	//初始化rpc调用
 	router.InitUserRpc()
 	srv.Run(r, config.C.SC.Name, config.C.SC.Addr, stop)
 }

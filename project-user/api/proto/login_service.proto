@@ -2,10 +2,11 @@ syntax = "proto3";
 package login.service.v1;
 option go_package = "project-user/pkg/service/login.service.v1";
 
+
 message CaptchaMessage {
   string mobile = 1;
 }
-message CaptchaResponse {
+message CaptchaResponse{
   string code = 1;
 }
 
@@ -16,26 +17,23 @@ message RegisterMessage {
   string mobile = 4;
   string captcha = 5;
 }
-
-message RegisterResponse {
-}
+message RegisterResponse {}
 
 message LoginMessage {
   string account = 1;
   string password = 2;
   string token = 3;
+  string ip = 4;
 }
-
-message LoginResponse {
+message LoginResponse{
   MemberMessage member = 1;
   repeated OrganizationMessage organizationList = 2;
   TokenMessage tokenList = 3;
 }
-
 message MemberMessage {
   int64 id = 1;
   string name = 2;
-  string mobile =3;
+  string mobile = 3;
   string realname = 4;
   string account = 5;
   int32 status = 6;
@@ -50,7 +48,9 @@ message MemberMessage {
   string organizationCode = 15;
   string avatar = 16;
 }
-
+message MemberMessageList {
+  repeated MemberMessage list = 1;
+}
 message OrganizationMessage {
   int64 id = 1;
   string name = 2;
@@ -66,8 +66,7 @@ message OrganizationMessage {
   string code = 12;
   string ownerCode = 13;
 }
-
-message TokenMessage {
+message TokenMessage{
   string accessToken = 1;
   string refreshToken = 2;
   string tokenType = 3;
@@ -76,6 +75,7 @@ message TokenMessage {
 
 message UserMessage{
   int64 memId = 1;
+  repeated int64 mIds = 2;
 }
 message OrgListResponse{
   repeated OrganizationMessage organizationList = 1;
@@ -87,5 +87,6 @@ service LoginService {
   rpc Login(LoginMessage) returns (LoginResponse) {}
   rpc TokenVerify(LoginMessage) returns (LoginResponse) {}
   rpc MyOrgList(UserMessage) returns (OrgListResponse) {}
-  rpc FindMemberInfoById(UserMessage) returns (MemberMessage) {}
+  rpc FindMemInfoById(UserMessage) returns (MemberMessage) {}
+  rpc FindMemInfoByIds(UserMessage) returns (MemberMessageList) {}
 }

@@ -9,7 +9,7 @@ import (
 	"test.com/project-api/pkg/model/user"
 	common "test.com/project-common"
 	"test.com/project-common/errs"
-	login "test.com/project-grpc/user/login"
+	"test.com/project-grpc/user/login"
 	"time"
 )
 
@@ -72,6 +72,15 @@ func (u *HandlerUser) register(ctx *gin.Context) {
 	ctx.JSON(http.StatusOK, result.Success(""))
 }
 
+// 获取ip函数
+func GetIp(c *gin.Context) string {
+	ip := c.ClientIP()
+	if ip == "::1" {
+		ip = "127.0.0.1"
+	}
+	return ip
+}
+
 func (u *HandlerUser) login(ctx *gin.Context) {
 	// 1. 接收参数 参数模型
 	result := &common.Result{}
@@ -92,6 +101,7 @@ func (u *HandlerUser) login(ctx *gin.Context) {
 		ctx.JSON(http.StatusOK, result.Fail(http.StatusBadRequest, "copy有误"))
 		return
 	}
+	msg.Ip = GetIp(ctx)
 	loginRsp, err := rpc.LoginServiceClient.Login(c, msg)
 	if err != nil {
 		code, msg := errs.ParseGrpcError(err)

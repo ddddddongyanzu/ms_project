@@ -4,7 +4,7 @@ import "github.com/gin-gonic/gin"
 
 type Page struct {
 	Page     int64 `json:"page" form:"page"`
-	PageSize int64 `json:"page_size" form:"pageSize"`
+	PageSize int64 `json:"pageSize" form:"pageSize"`
 }
 
 func (p *Page) Bind(c *gin.Context) {

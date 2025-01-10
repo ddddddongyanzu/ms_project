@@ -116,3 +116,19 @@
 {"level":"ERROR","time":"2025-01-08T11:32:50.319+0800","caller":"project.service.v1/project_collect.go:33","msg":"project UpdateCollectProject SaveCollectProject error","error":"context deadline exceeded"}
 {"level":"ERROR","time":"2025-01-09T10:22:56.682+0800","caller":"login.service.v1/login_service.go:242","msg":"TokenVerify cache get MemberOrganization get error","error":"redis: nil"}
 {"level":"ERROR","time":"2025-01-09T10:23:17.764+0800","caller":"project.service.v1/project_service.go:49","msg":"Index db FindMenus get error","error":"invalid connection"}
+{"level":"ERROR","time":"2025-01-09T19:30:56.698+0800","caller":"task.service.v1/task_service.go:380","msg":"project task MyTaskList taskRepo.FindTaskByAssignTo error","error":"Error 1146 (42S02): Table 'msproject.ms_task' doesn't exist"}
+{"level":"ERROR","time":"2025-01-09T19:32:28.017+0800","caller":"task.service.v1/task_service.go:380","msg":"project task MyTaskList taskRepo.FindTaskByAssignTo error","error":"Error 1146 (42S02): Table 'msproject.ms_task' doesn't exist"}
+{"level":"ERROR","time":"2025-01-09T19:54:18.477+0800","caller":"login.service.v1/login_service.go:130","msg":"Register db SaveMember error","error":"Error 1054 (42S22): Unknown column 'realname' in 'field list'"}
+{"level":"ERROR","time":"2025-01-10T09:18:00.670+0800","caller":"login.service.v1/login_service.go:220","msg":"Login  TokenVerify error","error":"ip不合法"}
+{"level":"ERROR","time":"2025-01-10T09:18:00.670+0800","caller":"login.service.v1/login_service.go:220","msg":"Login  TokenVerify error","error":"ip不合法"}
+{"level":"ERROR","time":"2025-01-10T09:18:00.670+0800","caller":"login.service.v1/login_service.go:220","msg":"Login  TokenVerify error","error":"ip不合法"}
+{"level":"ERROR","time":"2025-01-10T09:18:21.594+0800","caller":"login.service.v1/login_service.go:220","msg":"Login  TokenVerify error","error":"ip不合法"}
+{"level":"ERROR","time":"2025-01-10T09:18:29.105+0800","caller":"login.service.v1/login_service.go:220","msg":"Login  TokenVerify error","error":"ip不合法"}
+{"level":"ERROR","time":"2025-01-10T09:23:07.189+0800","caller":"discovery/resolver.go:146","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-10T09:23:07.190+0800","caller":"discovery/resolver.go:146","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-10T09:24:08.438+0800","caller":"login.service.v1/login_service.go:220","msg":"Login  TokenVerify error","error":"ip不合法"}
+{"level":"ERROR","time":"2025-01-10T09:26:52.176+0800","caller":"login.service.v1/login_service.go:220","msg":"Login  TokenVerify error","error":"ip不合法"}
+{"level":"ERROR","time":"2025-01-10T18:44:08.417+0800","caller":"discovery/resolver.go:146","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-10T18:44:08.419+0800","caller":"discovery/resolver.go:146","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-10T18:48:33.276+0800","caller":"task.service.v1/task_service.go:419","msg":"project task MyTaskList taskRepo.FindTaskByAssignTo error","error":"context canceled"}
+{"level":"ERROR","time":"2025-01-10T18:48:33.276+0800","caller":"project.service.v1/project_service.go:87","msg":"project FindProjectByMemId::FindCollectProjectByMemId error","error":"context canceled"}

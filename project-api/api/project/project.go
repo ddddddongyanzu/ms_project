@@ -11,15 +11,11 @@ import (
 	"test.com/project-api/pkg/model/pro"
 	common "test.com/project-common"
 	"test.com/project-common/errs"
-	project "test.com/project-grpc/project"
+	"test.com/project-grpc/project"
 	"time"
 )
 
 type HandlerProject struct {
-}
-
-func New() *HandlerProject {
-	return &HandlerProject{}
 }
 
 func (p *HandlerProject) index(c *gin.Context) {
@@ -27,12 +23,12 @@ func (p *HandlerProject) index(c *gin.Context) {
 	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
 	defer cancel()
 	msg := &project.IndexMessage{}
-	response, err := ProjectServiceClient.Index(ctx, msg)
+	indexResponse, err := ProjectServiceClient.Index(ctx, msg)
 	if err != nil {
 		code, msg := errs.ParseGrpcError(err)
 		c.JSON(http.StatusOK, result.Fail(code, msg))
 	}
-	menus := response.Menus
+	menus := indexResponse.Menus
 	var ms []*menu.Menu
 	copier.Copy(&ms, menus)
 	c.JSON(http.StatusOK, result.Success(ms))
@@ -40,7 +36,7 @@ func (p *HandlerProject) index(c *gin.Context) {
 
 func (p *HandlerProject) myProjectList(c *gin.Context) {
 	result := &common.Result{}
-	// 1. 获取参数
+	//1. 获取参数
 	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
 	defer cancel()
 	memberId := c.GetInt64("memberId")
@@ -59,42 +55,42 @@ func (p *HandlerProject) myProjectList(c *gin.Context) {
 		code, msg := errs.ParseGrpcError(err)
 		c.JSON(http.StatusOK, result.Fail(code, msg))
 	}
+
 	var pms []*pro.ProjectAndMember
 	copier.Copy(&pms, myProjectResponse.Pm)
 	if pms == nil {
 		pms = []*pro.ProjectAndMember{}
 	}
 	c.JSON(http.StatusOK, result.Success(gin.H{
-		"list":  pms, // null nil -> []
+		"list":  pms, //null nil -> []
 		"total": myProjectResponse.Total,
 	}))
 }
 
 func (p *HandlerProject) projectTemplate(c *gin.Context) {
 	result := &common.Result{}
-	// 1. 获取参数
+	//1. 获取参数
 	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
 	defer cancel()
 	memberId := c.GetInt64("memberId")
 	memberName := c.GetString("memberName")
-	organizationCode := c.GetString("organizationCode")
 	page := &model.Page{}
 	page.Bind(c)
 	viewTypeStr := c.PostForm("viewType")
-	viewType, err := strconv.ParseInt(viewTypeStr, 10, 64)
+	viewType, _ := strconv.ParseInt(viewTypeStr, 10, 64)
 	msg := &project.ProjectRpcMessage{
 		MemberId:         memberId,
 		MemberName:       memberName,
 		ViewType:         int32(viewType),
 		Page:             page.Page,
 		PageSize:         page.PageSize,
-		OrganizationCode: organizationCode,
-	}
+		OrganizationCode: c.GetString("organizationCode")}
 	templateResponse, err := ProjectServiceClient.FindProjectTemplate(ctx, msg)
 	if err != nil {
 		code, msg := errs.ParseGrpcError(err)
 		c.JSON(http.StatusOK, result.Fail(code, msg))
 	}
+
 	var pms []*pro.ProjectTemplate
 	copier.Copy(&pms, templateResponse.Ptm)
 	if pms == nil {
@@ -106,14 +102,14 @@ func (p *HandlerProject) projectTemplate(c *gin.Context) {
 		}
 	}
 	c.JSON(http.StatusOK, result.Success(gin.H{
-		"list":  pms, // null nil -> []
+		"list":  pms, //null nil -> []
 		"total": templateResponse.Total,
 	}))
 }
 
 func (p *HandlerProject) projectSave(c *gin.Context) {
 	result := &common.Result{}
-	// 1. 获取参数
+	//1. 获取参数
 	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
 	defer cancel()
 	memberId := c.GetInt64("memberId")
@@ -211,4 +207,48 @@ func (p *HandlerProject) editProject(c *gin.Context) {
 		c.JSON(http.StatusOK, result.Fail(code, msg))
 	}
 	c.JSON(http.StatusOK, result.Success([]int{}))
+}
+
+func (p *HandlerProject) getLogBySelfProject(c *gin.Context) {
+	result := &common.Result{}
+	var page = &model.Page{}
+	page.Bind(c)
+	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
+	defer cancel()
+	msg := &project.ProjectRpcMessage{
+		MemberId: c.GetInt64("memberId"),
+		Page:     page.Page,
+		PageSize: page.PageSize,
+	}
+
+	projectLogResponse, err := ProjectServiceClient.GetLogBySelfProject(ctx, msg)
+	if err != nil {
+		code, msg := errs.ParseGrpcError(err)
+		c.JSON(http.StatusOK, result.Fail(code, msg))
+		return // 立即返回，避免后续代码执行
+	}
+
+	// 检查 projectLogResponse 和 projectLogResponse.List 是否为 nil
+	if projectLogResponse == nil || projectLogResponse.List == nil {
+		c.JSON(http.StatusOK, result.Success([]*model.ProjectLog{}))
+		return
+	}
+
+	var list []*model.ProjectLog
+	// 使用 copier.Copy 前确保 projectLogResponse.List 非 nil
+	if err := copier.Copy(&list, projectLogResponse.List); err != nil {
+		// 处理 copier.Copy 可能产生的错误
+		code, _ := errs.ParseGrpcError(err)
+		c.JSON(http.StatusOK, result.Fail(code, "Failed to copy project logs"))
+		return
+	}
+
+	if list == nil {
+		list = []*model.ProjectLog{}
+	}
+	c.JSON(http.StatusOK, result.Success(list))
+}
+
+func New() *HandlerProject {
+	return &HandlerProject{}
 }

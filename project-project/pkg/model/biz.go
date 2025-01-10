@@ -32,3 +32,27 @@ const (
 	NoCollected = iota
 	Collected
 )
+
+const (
+	NoOwner = iota
+	Owner
+)
+
+const (
+	NoExecutor = iota
+	Executor
+)
+const (
+	NoCanRead = iota
+	CanRead
+)
+
+const (
+	UnDone = iota
+	Done
+)
+
+const (
+	NoComment = iota
+	Comment
+)

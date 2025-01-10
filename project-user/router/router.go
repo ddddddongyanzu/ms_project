@@ -8,12 +8,13 @@ import (
 	"net"
 	"test.com/project-common/discovery"
 	"test.com/project-common/logs"
-	login "test.com/project-grpc/user/login"
+	"test.com/project-grpc/user/login"
 	"test.com/project-user/config"
-	"test.com/project-user/interceptor"
+	"test.com/project-user/internal/interceptor"
 	loginServiceV1 "test.com/project-user/pkg/service/login.service.v1"
 )
 
+//Router 接口
 type Router interface {
 	Route(r *gin.Engine)
 }
@@ -53,20 +54,19 @@ func RegisterGrpc() *grpc.Server {
 		Addr: config.C.GC.Addr,
 		RegisterFunc: func(g *grpc.Server) {
 			login.RegisterLoginServiceServer(g, loginServiceV1.New())
-		},
-	}
+		}}
 	cacheInterceptor := interceptor.New()
 	s := grpc.NewServer(cacheInterceptor.Cache())
 	c.RegisterFunc(s)
 	lis, err := net.Listen("tcp", c.Addr)
 	if err != nil {
-		log.Println("cannot listen:", err)
+		log.Println("cannot listen")
 	}
 	go func() {
-		log.Printf("init project-project_user\n grpc server started as: %s\n", c.Addr)
+		log.Printf("grpc server started as: %s \n", c.Addr)
 		err = s.Serve(lis)
 		if err != nil {
-			log.Println("serve started error:", err)
+			log.Println("server started error", err)
 			return
 		}
 	}()
@@ -76,6 +76,7 @@ func RegisterGrpc() *grpc.Server {
 func RegisterEtcdServer() {
 	etcdRegister := discovery.NewResolver(config.C.EtcdConfig.Addrs, logs.LG)
 	resolver.Register(etcdRegister)
+
 	info := discovery.Server{
 		Name:    config.C.GC.Name,
 		Addr:    config.C.GC.Addr,

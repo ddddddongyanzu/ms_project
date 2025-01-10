@@ -5,6 +5,7 @@ import (
 	"google.golang.org/grpc"
 )
 
+//Router 接口
 type Router interface {
 	Route(r *gin.Engine)
 }

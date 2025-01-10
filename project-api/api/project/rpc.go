@@ -8,7 +8,7 @@ import (
 	"test.com/project-api/config"
 	"test.com/project-common/discovery"
 	"test.com/project-common/logs"
-	project "test.com/project-grpc/project"
+	"test.com/project-grpc/project"
 	"test.com/project-grpc/task"
 )
 
@@ -29,3 +29,4 @@ func InitRpcProjectClient() {
 	ProjectServiceClient = project.NewProjectServiceClient(conn)
 	TaskServiceClient = task.NewTaskServiceClient(conn)
 }
+

@@ -28,14 +28,12 @@ func EncryptNoErr(id int64) string {
 	str, _ := EncryptInt64(id, AESKey)
 	return str
 }
-
 func EncryptInt64(id int64, keyText string) (cipherStr string, err error) {
 	idStr := strconv.FormatInt(id, 10)
 	return Encrypt(idStr, keyText)
 }
-
 func Encrypt(plainText string, keyText string) (cipherStr string, err error) {
-	// 转换成字节数据，方便加密
+	// 转换成字节数据, 方便加密
 	plainByte := []byte(plainText)
 	keyByte := []byte(keyText)
 	// 创建加密算法aes
@@ -43,16 +41,17 @@ func Encrypt(plainText string, keyText string) (cipherStr string, err error) {
 	if err != nil {
 		return "", err
 	}
-	// 加密字符串
+	//加密字符串
 	cfb := cipher.NewCFBEncrypter(c, commonIV)
 	cipherByte := make([]byte, len(plainByte))
 	cfb.XORKeyStream(cipherByte, plainByte)
 	cipherStr = hex.EncodeToString(cipherByte)
 	return
 }
-
 func Decrypt(cipherStr string, keyText string) (plainText string, err error) {
+	// 转换成字节数据, 方便加密
 	keyByte := []byte(keyText)
+	// 创建加密算法aes
 	c, err := aes.NewCipher(keyByte)
 	if err != nil {
 		return "", err

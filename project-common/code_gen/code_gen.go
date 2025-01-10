@@ -5,10 +5,10 @@ import (
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
-	"html/template"
 	"log"
 	"os"
 	"strings"
+	"text/template"
 )
 
 func connectMysql() *gorm.DB {
@@ -141,6 +141,7 @@ func Name(name string) string {
 			isSkip = false
 			continue
 		}
+		//95 下划线  user_name
 		if value == 95 {
 			s := names[index+1 : index+2]
 			s = strings.ToUpper(s)

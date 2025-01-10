@@ -8,7 +8,7 @@ import (
 	"test.com/project-api/config"
 	"test.com/project-common/discovery"
 	"test.com/project-common/logs"
-	login "test.com/project-grpc/user/login"
+	"test.com/project-grpc/user/login"
 )
 
 var LoginServiceClient login.LoginServiceClient
@@ -26,3 +26,5 @@ func InitRpcUserClient() {
 	}
 	LoginServiceClient = login.NewLoginServiceClient(conn)
 }
+
+

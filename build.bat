@@ -4,7 +4,7 @@ chcp 65001
 @echo off&amp;color 0A
 cls
 echo,
-echo 请选择要编译的系统环境
+echo 请选择要编译的系统环境：
 echo,
 echo 1. Windows_amd64
 echo 2. linux_amd64
@@ -27,4 +27,3 @@ SET GOOS=linux
 SET GOARCH=amd64
 go build -o project-user/target/project-user project-user/main.go
 go build -o project-api/target/project-api project-api/main.go
-

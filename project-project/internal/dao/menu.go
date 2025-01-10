@@ -10,7 +10,7 @@ type MenuDao struct {
 	conn *gorms.GormConn
 }
 
-func (m MenuDao) FindMenus(ctx context.Context) (pms []*menu.ProjectMenu, err error) {
+func (m *MenuDao) FindMenus(ctx context.Context) (pms []*menu.ProjectMenu, err error) {
 	session := m.conn.Session(ctx)
 	err = session.Order("pid,sort asc, id asc").Find(&pms).Error
 	return

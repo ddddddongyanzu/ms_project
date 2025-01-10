@@ -7,7 +7,7 @@ import (
 	"test.com/project-common/encrypts"
 	"test.com/project-common/errs"
 	"test.com/project-grpc/project"
-	"test.com/project-project/internal/data/pro"
+	"test.com/project-project/internal/data"
 	"test.com/project-project/pkg/model"
 	"time"
 )
@@ -19,18 +19,18 @@ func (ps *ProjectService) UpdateCollectProject(ctx context.Context, msg *project
 	defer cancel()
 	var err error
 	if "collect" == msg.CollectType {
-		pc := &pro.ProjectCollection{
+		pc := &data.ProjectCollection{
 			ProjectCode: projectCode,
 			MemberCode:  msg.MemberId,
 			CreateTime:  time.Now().UnixMilli(),
 		}
-		err = ps.projectRepo.SaveCollectProject(c, pc)
+		err = ps.projectRepo.SaveProjectCollect(c, pc)
 	}
 	if "cancel" == msg.CollectType {
 		err = ps.projectRepo.DeleteProjectCollect(c, msg.MemberId, projectCode)
 	}
 	if err != nil {
-		zap.L().Error("project UpdateCollectProject SaveCollectProject error", zap.Error(err))
+		zap.L().Error("project UpdateCollectProject SaveProjectCollect error", zap.Error(err))
 		return nil, errs.GrpcError(model.DBError)
 	}
 	return &project.CollectProjectResponse{}, nil

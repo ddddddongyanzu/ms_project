@@ -12,13 +12,13 @@ type RouterUser struct {
 }
 
 func init() {
-	log.Println("init project-api_user router")
+	log.Println("init user router")
 	ru := &RouterUser{}
 	router.Register(ru)
 }
 
 func (*RouterUser) Route(r *gin.Engine) {
-	// 初始化grpc的客户端连接
+	//初始化grpc的客户端连接
 	rpc.InitRpcUserClient()
 	h := New()
 	r.POST("/project/login/getCaptcha", h.getCaptcha)

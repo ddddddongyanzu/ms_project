@@ -6,20 +6,26 @@ import (
 	"go.uber.org/zap"
 	"google.golang.org/grpc"
 	"test.com/project-common/encrypts"
-	"test.com/project-grpc/project"
 	"test.com/project-project/internal/dao"
 	"test.com/project-project/internal/repo"
 	"time"
 )
 
+//CacheInterceptor 除了缓存拦截器 实现日志拦截器 打印参数内容值 请求的时间 等等的
 type CacheInterceptor struct {
 	cache    repo.Cache
 	cacheMap map[string]any
 }
 
+type CacheRespOption struct {
+	path   string
+	typ    any
+	expire time.Duration
+}
+
 func New() *CacheInterceptor {
 	cacheMap := make(map[string]any)
-	cacheMap["/project.service.v1.ProjectService/FindProjectByMemId"] = &project.MyProjectResponse{}
+	//cacheMap["/project.service.v1.ProjectService/FindProjectByMemId"] = &project.MyProjectResponse{}
 	return &CacheInterceptor{cache: dao.Rc, cacheMap: cacheMap}
 }
 
@@ -29,7 +35,7 @@ func (c *CacheInterceptor) Cache() grpc.ServerOption {
 		if respType == nil {
 			return handler(ctx, req)
 		}
-		// 先查询是否有缓存，有的话直接返回 无 先请求 然后存储缓存
+		//先查询是否有缓存 有的话 直接返回 无 先请求 然后存入缓存
 		con, cancel := context.WithTimeout(context.Background(), 2*time.Second)
 		defer cancel()
 		marshal, _ := json.Marshal(req)
@@ -37,13 +43,13 @@ func (c *CacheInterceptor) Cache() grpc.ServerOption {
 		respJson, _ := c.cache.Get(con, info.FullMethod+"::"+cacheKey)
 		if respJson != "" {
 			json.Unmarshal([]byte(respJson), &respType)
-			zap.L().Info(info.FullMethod + "走了缓存")
+			zap.L().Info(info.FullMethod + " 走了缓存")
 			return respType, nil
 		}
 		resp, err = handler(ctx, req)
 		bytes, _ := json.Marshal(resp)
 		c.cache.Put(con, info.FullMethod+"::"+cacheKey, string(bytes), 5*time.Minute)
-		zap.L().Info(info.FullMethod + "放入缓存")
+		zap.L().Info(info.FullMethod + " 放入缓存")
 		return
 	})
 }
