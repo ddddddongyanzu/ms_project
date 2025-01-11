@@ -132,3 +132,10 @@
 {"level":"ERROR","time":"2025-01-10T18:44:08.419+0800","caller":"discovery/resolver.go:146","msg":"sync failed","error":"context deadline exceeded"}
 {"level":"ERROR","time":"2025-01-10T18:48:33.276+0800","caller":"task.service.v1/task_service.go:419","msg":"project task MyTaskList taskRepo.FindTaskByAssignTo error","error":"context canceled"}
 {"level":"ERROR","time":"2025-01-10T18:48:33.276+0800","caller":"project.service.v1/project_service.go:87","msg":"project FindProjectByMemId::FindCollectProjectByMemId error","error":"context canceled"}
+{"level":"ERROR","time":"2025-01-10T20:27:31.443+0800","caller":"task.service.v1/task_service.go:695","msg":"project task SaveTaskFile fileRepo.Save error","error":"Error 1406 (22001): Data too long for column 'title' at row 1"}
+{"level":"ERROR","time":"2025-01-11T09:28:52.997+0800","caller":"task.service.v1/task_service.go:132","msg":"project task TaskList FindTaskByStageCode error","error":"invalid connection"}
+{"level":"ERROR","time":"2025-01-11T09:29:03.033+0800","caller":"login.service.v1/login_service.go:159","msg":"Login db FindMember error","error":"invalid connection"}
+{"level":"ERROR","time":"2025-01-11T10:26:33.094+0800","caller":"login.service.v1/login_service.go:220","msg":"Login  TokenVerify error","error":"token contains an invalid number of segments"}
+{"level":"ERROR","time":"2025-01-11T10:26:38.562+0800","caller":"login.service.v1/login_service.go:220","msg":"Login  TokenVerify error","error":"token contains an invalid number of segments"}
+{"level":"ERROR","time":"2025-01-11T10:27:12.299+0800","caller":"login.service.v1/login_service.go:220","msg":"Login  TokenVerify error","error":"token contains an invalid number of segments"}
+{"level":"ERROR","time":"2025-01-11T10:27:36.067+0800","caller":"login.service.v1/login_service.go:220","msg":"Login  TokenVerify error","error":"token contains an invalid number of segments"}

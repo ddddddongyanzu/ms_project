@@ -1,0 +1,7 @@
+curl --location '127.0.0.1/project/task/selfList' \
+--header 'Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzcxNjM4NTQsImlwIjoiMTI3LjAuMC4xIiwidG9rZW4iOiIxMDIxIn0.NvrIOTu2cLscyiZVzig9Ft8YhfHyCMnwPkWuP39Ajeo' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'taskType=1' \
+--data-urlencode 'type=0' \
+--data-urlencode 'page=1' \
+--data-urlencode 'pageSize=10'
