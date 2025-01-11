@@ -31,6 +31,37 @@ func (d *DepartmentDomain) List(organizationCode int64, parentDepartmentCode int
 	}
 	return dList, total, nil
 }
+
+func (d *DepartmentDomain) Save(
+	organizationCode int64,
+	departmentCode int64,
+	parentDepartmentCode int64,
+	name string) (*data.DepartmentDisplay, *errs.BError) {
+
+	c, cancel := context.WithTimeout(context.Background(), 2*time.Second)
+	defer cancel()
+	dpm, err := d.departmentRepo.FindDepartment(c, organizationCode, parentDepartmentCode, name)
+	if err != nil {
+		return nil, model.DBError
+	}
+	if dpm == nil {
+		dpm = &data.Department{
+			Name:             name,
+			OrganizationCode: organizationCode,
+			CreateTime:       time.Now().UnixMilli(),
+		}
+		if parentDepartmentCode > 0 {
+			dpm.Pcode = parentDepartmentCode
+		}
+		err := d.departmentRepo.Save(dpm)
+		if err != nil {
+			return nil, model.DBError
+		}
+		return dpm.ToDisplay(), nil
+	}
+	return dpm.ToDisplay(), nil
+}
+
 func NewDepartmentDomain() *DepartmentDomain {
 	return &DepartmentDomain{
 		departmentRepo: dao.NewDepartmentDao(),
