@@ -8,16 +8,18 @@ import (
 	"net"
 	"test.com/project-common/discovery"
 	"test.com/project-common/logs"
+	"test.com/project-grpc/account"
 	"test.com/project-grpc/project"
 	"test.com/project-grpc/task"
 	"test.com/project-project/config"
 	"test.com/project-project/internal/interceptor"
 	"test.com/project-project/internal/rpc"
+	account_service_v1 "test.com/project-project/pkg/service/account.service.v1"
 	project_service_v1 "test.com/project-project/pkg/service/project.service.v1"
 	task_service_v1 "test.com/project-project/pkg/service/task.service.v1"
 )
 
-//Router 接口
+// Router 接口
 type Router interface {
 	Route(r *gin.Engine)
 }
@@ -58,6 +60,7 @@ func RegisterGrpc() *grpc.Server {
 		RegisterFunc: func(g *grpc.Server) {
 			project.RegisterProjectServiceServer(g, project_service_v1.New())
 			task.RegisterTaskServiceServer(g, task_service_v1.New())
+			account.RegisterAccountServiceServer(g, account_service_v1.New())
 		}}
 	s := grpc.NewServer(interceptor.New().Cache())
 	c.RegisterFunc(s)
