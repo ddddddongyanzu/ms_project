@@ -142,3 +142,4 @@
 {"level":"ERROR","time":"2025-01-11T20:19:14.303+0800","caller":"login.service.v1/login_service.go:299","msg":"FindMemInfoByIds db memberRepo.FindMemberByIds error","error":"invalid connection"}
 {"level":"ERROR","time":"2025-01-11T21:05:53.325+0800","caller":"discovery/resolver.go:146","msg":"sync failed","error":"context deadline exceeded"}
 {"level":"ERROR","time":"2025-01-11T21:09:11.186+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-12T17:22:12.553+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"etcdserver: requested lease not found"}

@@ -12899,3 +12899,121 @@
 {"level":"INFO","time":"2025-01-12T15:19:01.218+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/MyOrgList 走了缓存"}
 {"level":"INFO","time":"2025-01-12T15:19:01.218+0800","caller":"midd/log_time.go:16","msg":"/project/organization/_getOrgList 用时 5 ms"}
 {"level":"INFO","time":"2025-01-12T15:19:01.231+0800","caller":"midd/log_time.go:16","msg":"/project/auth/apply 用时 17 ms"}
+{"level":"INFO","time":"2025-01-12T16:49:18.616+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T16:49:18.638+0800","caller":"midd/log_time.go:16","msg":"/project/auth 用时 76 ms"}
+{"level":"INFO","time":"2025-01-12T16:49:20.753+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T16:49:20.758+0800","caller":"midd/log_time.go:16","msg":"/project/account 用时 9 ms"}
+{"level":"INFO","time":"2025-01-12T16:49:22.006+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T16:49:22.010+0800","caller":"midd/log_time.go:16","msg":"/project/auth 用时 7 ms"}
+{"level":"INFO","time":"2025-01-12T16:54:28.000+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T16:54:28.012+0800","caller":"midd/log_time.go:16","msg":"/project/node 用时 35 ms"}
+{"level":"INFO","time":"2025-01-12T16:54:29.161+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T16:54:29.168+0800","caller":"midd/log_time.go:16","msg":"/project/menu/menu 用时 11 ms"}
+{"level":"INFO","time":"2025-01-12T16:54:30.983+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T16:54:30.988+0800","caller":"midd/log_time.go:16","msg":"/project/auth 用时 10 ms"}
+{"level":"INFO","time":"2025-01-12T17:13:42.188+0800","caller":"midd/log_time.go:16","msg":"/project/notify/noReads 用时 0 ms"}
+{"level":"INFO","time":"2025-01-12T17:13:42.201+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:13:42.209+0800","caller":"interceptor/cache.go:53","msg":"/login.service.v1.LoginService/MyOrgList 放入缓存"}
+{"level":"INFO","time":"2025-01-12T17:17:57.262+0800","caller":"midd/log_time.go:16","msg":"/project/auth 用时 255074 ms"}
+{"level":"INFO","time":"2025-01-12T17:17:57.263+0800","caller":"midd/log_time.go:16","msg":"/project/organization/_getOrgList 用时 255075 ms"}
+{"level":"INFO","time":"2025-01-12T17:19:53.164+0800","caller":"midd/log_time.go:16","msg":"/project/notify/noReads 用时 0 ms"}
+{"level":"INFO","time":"2025-01-12T17:19:53.176+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:19:53.191+0800","caller":"interceptor/cache.go:53","msg":"/login.service.v1.LoginService/MyOrgList 放入缓存"}
+{"level":"INFO","time":"2025-01-12T17:19:53.194+0800","caller":"midd/log_time.go:16","msg":"/project/organization/_getOrgList 用时 28 ms"}
+{"level":"INFO","time":"2025-01-12T17:19:55.177+0800","caller":"midd/log_time.go:16","msg":"/project/auth 用时 2012 ms"}
+{"level":"ERROR","time":"2025-01-12T17:22:12.553+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"etcdserver: requested lease not found"}
+{"level":"INFO","time":"2025-01-12T17:22:29.762+0800","caller":"midd/log_time.go:16","msg":"/project/notify/noReads 用时 0 ms"}
+{"level":"INFO","time":"2025-01-12T17:22:29.766+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:22:29.767+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/MyOrgList 走了缓存"}
+{"level":"INFO","time":"2025-01-12T17:22:29.768+0800","caller":"midd/log_time.go:16","msg":"/project/organization/_getOrgList 用时 6 ms"}
+{"level":"INFO","time":"2025-01-12T17:22:29.789+0800","caller":"midd/log_time.go:16","msg":"/project/auth 用时 27 ms"}
+{"level":"INFO","time":"2025-01-12T17:22:31.908+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:22:31.925+0800","caller":"interceptor/cache.go:53","msg":"/login.service.v1.LoginService/FindMemInfoById 放入缓存"}
+{"level":"INFO","time":"2025-01-12T17:22:31.928+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-12T17:22:31.932+0800","caller":"midd/log_time.go:16","msg":"/project/account 用时 28 ms"}
+{"level":"INFO","time":"2025-01-12T17:22:38.114+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:22:38.125+0800","caller":"midd/log_time.go:16","msg":"/project/auth 用时 16 ms"}
+{"level":"INFO","time":"2025-01-12T17:22:42.463+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:22:42.479+0800","caller":"midd/log_time.go:16","msg":"/project/auth/apply 用时 18 ms"}
+{"level":"INFO","time":"2025-01-12T17:22:45.008+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:22:45.056+0800","caller":"midd/log_time.go:16","msg":"/project/auth/apply 用时 51 ms"}
+{"level":"INFO","time":"2025-01-12T17:22:45.687+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:22:45.695+0800","caller":"midd/log_time.go:16","msg":"/project/account 用时 13 ms"}
+{"level":"INFO","time":"2025-01-12T17:22:47.196+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:22:47.206+0800","caller":"midd/log_time.go:16","msg":"/project/auth 用时 13 ms"}
+{"level":"INFO","time":"2025-01-12T17:22:49.003+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:22:49.017+0800","caller":"midd/log_time.go:16","msg":"/project/auth/apply 用时 16 ms"}
+{"level":"INFO","time":"2025-01-12T17:22:50.979+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:22:50.999+0800","caller":"midd/log_time.go:16","msg":"/project/auth/apply 用时 22 ms"}
+{"level":"INFO","time":"2025-01-12T17:22:51.635+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:22:51.643+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-12T17:22:51.646+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-12T17:22:51.650+0800","caller":"midd/log_time.go:16","msg":"/project/account 用时 18 ms"}
+{"level":"INFO","time":"2025-01-12T17:22:52.488+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:22:52.504+0800","caller":"midd/log_time.go:16","msg":"/project/auth 用时 21 ms"}
+{"level":"INFO","time":"2025-01-12T17:22:58.799+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:22:58.814+0800","caller":"midd/log_time.go:16","msg":"/project/auth/apply 用时 18 ms"}
+{"level":"INFO","time":"2025-01-12T17:23:01.373+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:23:01.388+0800","caller":"midd/log_time.go:16","msg":"/project/auth/apply 用时 17 ms"}
+{"level":"INFO","time":"2025-01-12T17:23:01.998+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:23:02.039+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-12T17:23:02.045+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-12T17:23:02.052+0800","caller":"midd/log_time.go:16","msg":"/project/account 用时 58 ms"}
+{"level":"INFO","time":"2025-01-12T17:23:04.435+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:23:04.443+0800","caller":"midd/log_time.go:16","msg":"/project/auth 用时 11 ms"}
+{"level":"INFO","time":"2025-01-12T17:23:05.849+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:23:05.869+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-12T17:23:05.874+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-12T17:23:05.880+0800","caller":"midd/log_time.go:16","msg":"/project/account 用时 37 ms"}
+{"level":"INFO","time":"2025-01-12T17:23:07.236+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:23:07.244+0800","caller":"midd/log_time.go:16","msg":"/project/auth 用时 10 ms"}
+{"level":"INFO","time":"2025-01-12T17:23:11.049+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:23:11.061+0800","caller":"midd/log_time.go:16","msg":"/project/auth/apply 用时 15 ms"}
+{"level":"INFO","time":"2025-01-12T17:23:14.117+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:23:14.126+0800","caller":"midd/log_time.go:16","msg":"/project/auth/apply 用时 12 ms"}
+{"level":"INFO","time":"2025-01-12T17:23:14.910+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:23:14.919+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-12T17:23:14.922+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-12T17:23:14.926+0800","caller":"midd/log_time.go:16","msg":"/project/account 用时 23 ms"}
+{"level":"INFO","time":"2025-01-12T17:23:16.194+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:23:16.209+0800","caller":"midd/log_time.go:16","msg":"/project/auth 用时 22 ms"}
+{"level":"INFO","time":"2025-01-12T17:23:17.630+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:23:17.644+0800","caller":"midd/log_time.go:16","msg":"/project/auth/apply 用时 17 ms"}
+{"level":"INFO","time":"2025-01-12T17:23:20.256+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:23:20.265+0800","caller":"midd/log_time.go:16","msg":"/project/auth 用时 12 ms"}
+{"level":"INFO","time":"2025-01-12T17:23:21.639+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:23:21.653+0800","caller":"midd/log_time.go:16","msg":"/project/auth/apply 用时 17 ms"}
+{"level":"INFO","time":"2025-01-12T17:23:22.980+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:23:22.997+0800","caller":"midd/log_time.go:16","msg":"/project/auth 用时 24 ms"}
+{"level":"INFO","time":"2025-01-12T17:23:24.236+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:23:24.257+0800","caller":"midd/log_time.go:16","msg":"/project/auth/apply 用时 24 ms"}
+{"level":"INFO","time":"2025-01-12T17:23:27.158+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:23:27.173+0800","caller":"midd/log_time.go:16","msg":"/project/auth/apply 用时 17 ms"}
+{"level":"INFO","time":"2025-01-12T17:23:27.790+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:23:27.800+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-12T17:23:27.804+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-12T17:23:27.808+0800","caller":"midd/log_time.go:16","msg":"/project/account 用时 21 ms"}
+{"level":"INFO","time":"2025-01-12T17:23:29.290+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:23:29.299+0800","caller":"midd/log_time.go:16","msg":"/project/auth 用时 12 ms"}
+{"level":"INFO","time":"2025-01-12T17:23:30.509+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:23:30.532+0800","caller":"midd/log_time.go:16","msg":"/project/auth/apply 用时 27 ms"}
+{"level":"INFO","time":"2025-01-12T17:23:32.573+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:23:32.588+0800","caller":"midd/log_time.go:16","msg":"/project/auth/apply 用时 17 ms"}
+{"level":"INFO","time":"2025-01-12T17:23:33.005+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:23:33.014+0800","caller":"midd/log_time.go:16","msg":"/project/auth 用时 12 ms"}
+{"level":"INFO","time":"2025-01-12T17:23:33.840+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:23:33.852+0800","caller":"midd/log_time.go:16","msg":"/project/auth/apply 用时 14 ms"}
+{"level":"INFO","time":"2025-01-12T17:23:35.848+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:23:35.871+0800","caller":"midd/log_time.go:16","msg":"/project/auth/apply 用时 26 ms"}
+{"level":"INFO","time":"2025-01-12T17:23:36.674+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:23:36.679+0800","caller":"midd/log_time.go:16","msg":"/project/account 用时 9 ms"}
+{"level":"INFO","time":"2025-01-12T17:23:37.363+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:23:37.373+0800","caller":"midd/log_time.go:16","msg":"/project/auth 用时 12 ms"}
+{"level":"INFO","time":"2025-01-12T17:23:38.464+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:23:38.476+0800","caller":"midd/log_time.go:16","msg":"/project/auth/apply 用时 15 ms"}
+{"level":"INFO","time":"2025-01-12T17:23:39.719+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:23:39.745+0800","caller":"midd/log_time.go:16","msg":"/project/auth/apply 用时 28 ms"}
+{"level":"INFO","time":"2025-01-12T17:23:40.294+0800","caller":"project/auth_midd.go:21","msg":"开始做授权认证"}
+{"level":"INFO","time":"2025-01-12T17:23:40.304+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-12T17:23:40.306+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-12T17:23:40.310+0800","caller":"midd/log_time.go:16","msg":"/project/account 用时 22 ms"}
