@@ -34,6 +34,7 @@ func (*RouterProject) Route(r *gin.Engine) {
 	group.POST("/project/edit", h.editProject)
 	//这个接口存在bug，先注释掉，后面再来调
 	//group.POST("/project/getLogBySelfProject", h.getLogBySelfProject)
+	group.POST("/node", h.nodeList)
 
 	t := NewTask()
 	group.POST("/task_stages", t.taskStages)
