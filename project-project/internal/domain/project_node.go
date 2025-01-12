@@ -22,6 +22,14 @@ func (d *ProjectNodeDomain) TreeList() ([]*data.ProjectNodeTree, *errs.BError) {
 	return data.ToNodeTreeList(nodes), nil
 }
 
+func (d *ProjectNodeDomain) AllNodeList() ([]*data.ProjectNode, *errs.BError) {
+	nodes, err := d.projectNodeRepo.FindAll(context.Background())
+	if err != nil {
+		return nil, model.DBError
+	}
+	return nodes, nil
+}
+
 func NewProjectNodeDomain() *ProjectNodeDomain {
 	return &ProjectNodeDomain{
 		projectNodeRepo: dao.NewProjectNodeDao(),

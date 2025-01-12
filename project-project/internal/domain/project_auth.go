@@ -12,8 +12,10 @@ import (
 )
 
 type ProjectAuthDomain struct {
-	projectAuthRepo repo.ProjectAuthRepo
-	userRpcDomain   *UserRpcDomain
+	projectAuthRepo       repo.ProjectAuthRepo
+	userRpcDomain         *UserRpcDomain
+	projectNodeDomain     *ProjectNodeDomain
+	projectAuthNodeDomain *ProjectAuthNodeDomain
 }
 
 func (d *ProjectAuthDomain) AuthList(orgCode int64) ([]*data.ProjectAuthDisplay, *errs.BError) {
@@ -48,9 +50,23 @@ func (d *ProjectAuthDomain) AuthListPage(orgCode int64, page int64, pageSize int
 	return pdList, total, nil
 }
 
+func (d *ProjectAuthDomain) AllNodeAndAuth(authId int64) ([]*data.ProjectNodeAuthTree, []string, *errs.BError) {
+	nodeList, err := d.projectNodeDomain.AllNodeList()
+	if err != nil {
+		return nil, nil, err
+	}
+	checkedList, err := d.projectAuthNodeDomain.AuthNodeList(authId)
+	if err != nil {
+		return nil, nil, err
+	}
+	list := data.ToAuthNodeTreeList(nodeList, checkedList)
+	return list, checkedList, nil
+}
 func NewProjectAuthDomain() *ProjectAuthDomain {
 	return &ProjectAuthDomain{
-		projectAuthRepo: dao.NewProjectAuthDao(),
-		userRpcDomain:   NewUserRpcDomain(),
+		projectAuthRepo:       dao.NewProjectAuthDao(),
+		userRpcDomain:         NewUserRpcDomain(),
+		projectNodeDomain:     NewProjectNodeDomain(),
+		projectAuthNodeDomain: NewProjectAuthNodeDomain(),
 	}
 }

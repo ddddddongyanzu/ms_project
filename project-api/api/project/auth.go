@@ -44,6 +44,31 @@ func (a *HandlerAuth) authList(c *gin.Context) {
 	}))
 }
 
+func (a *HandlerAuth) apply(c *gin.Context) {
+	result := &common.Result{}
+	var req *model.ProjectAuthReq
+	c.ShouldBind(&req)
+	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
+	defer cancel()
+	msg := &auth.AuthReqMessage{
+		Action: req.Action,
+		AuthId: req.Id,
+	}
+	applyResponse, err := AuthServiceClient.Apply(ctx, msg)
+	if err != nil {
+		code, msg := errs.ParseGrpcError(err)
+		c.JSON(http.StatusOK, result.Fail(code, msg))
+	}
+	var list []*model.ProjectNodeAuthTree
+	copier.Copy(&list, applyResponse.List)
+	var checkedList []string
+	copier.Copy(&checkedList, applyResponse.CheckedList)
+	c.JSON(http.StatusOK, result.Success(gin.H{
+		"list":        list,
+		"checkedList": checkedList,
+	}))
+}
+
 func NewAuth() *HandlerAuth {
 	return &HandlerAuth{}
 }
