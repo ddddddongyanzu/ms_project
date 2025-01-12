@@ -12,7 +12,6 @@ import (
 	"test.com/project-grpc/user/login"
 	"test.com/project-project/internal/dao"
 	"test.com/project-project/internal/data"
-	"test.com/project-project/internal/data/menu"
 	"test.com/project-project/internal/database"
 	"test.com/project-project/internal/database/tran"
 	"test.com/project-project/internal/repo"
@@ -54,7 +53,7 @@ func (p *ProjectService) Index(context.Context, *project.IndexMessage) (*project
 		zap.L().Error("Index db FindMenus error", zap.Error(err))
 		return nil, errs.GrpcError(model.DBError)
 	}
-	childs := menu.CovertChild(pms)
+	childs := data.CovertChild(pms)
 	var mms []*project.MenuMessage
 	copier.Copy(&mms, childs)
 	return &project.IndexResponse{Menus: mms}, nil
