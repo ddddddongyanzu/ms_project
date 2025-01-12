@@ -2,6 +2,7 @@ package project
 
 import (
 	"context"
+	"encoding/json"
 	"github.com/gin-gonic/gin"
 	"github.com/jinzhu/copier"
 	"net/http"
@@ -48,11 +49,16 @@ func (a *HandlerAuth) apply(c *gin.Context) {
 	result := &common.Result{}
 	var req *model.ProjectAuthReq
 	c.ShouldBind(&req)
+	var nodes []string
+	if req.Nodes != "" {
+		json.Unmarshal([]byte(req.Nodes), &nodes)
+	}
 	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
 	defer cancel()
 	msg := &auth.AuthReqMessage{
 		Action: req.Action,
 		AuthId: req.Id,
+		Nodes:  nodes,
 	}
 	applyResponse, err := AuthServiceClient.Apply(ctx, msg)
 	if err != nil {

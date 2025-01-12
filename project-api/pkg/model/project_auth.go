@@ -17,4 +17,5 @@ type ProjectAuth struct {
 type ProjectAuthReq struct {
 	Action string `form:"action"`
 	Id     int64  `form:"id"`
+	Nodes  string `form:"nodes"`
 }
