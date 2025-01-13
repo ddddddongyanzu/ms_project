@@ -1,5 +1,5 @@
 server:
-  name: "project-user"
+  name: "project-project"
   addr: "0.0.0.0:8080"
 zap:
   debugFileName: "/logs/debug/project-debug.log"

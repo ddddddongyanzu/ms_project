@@ -13810,3 +13810,312 @@
 {"level":"INFO","time":"2025-01-13T08:58:53.144+0800","caller":"interceptor/cache.go:53","msg":"/login.service.v1.LoginService/FindMemInfoById 放入缓存"}
 {"level":"INFO","time":"2025-01-13T08:58:53.149+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
 {"level":"INFO","time":"2025-01-13T08:58:53.159+0800","caller":"midd/log_time.go:16","msg":"/project/account 用时 102 ms"}
+{"level":"ERROR","time":"2025-01-13T09:17:18.273+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:17:18.730+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:17:21.275+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:17:21.733+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:17:24.275+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:17:24.734+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:17:27.276+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:17:27.735+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:17:30.277+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:17:30.735+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:17:33.277+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:17:33.735+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:17:36.278+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:17:36.736+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:17:39.278+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:17:39.736+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:17:42.279+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:17:42.288+0800","caller":"discovery/resolver.go:146","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:17:42.737+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:17:45.279+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:17:45.738+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:17:48.279+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:17:48.738+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:17:51.025+0800","caller":"discovery/resolver.go:146","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:17:51.028+0800","caller":"discovery/resolver.go:146","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:17:51.280+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:17:51.738+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:17:54.280+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:17:54.739+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:17:57.281+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:17:57.739+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:00.281+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:00.739+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:03.281+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:03.740+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:06.282+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:06.740+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:09.282+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:09.741+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:12.283+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:12.741+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:15.283+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:15.741+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:18.283+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:18.742+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:21.284+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:21.742+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:24.284+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:24.743+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:27.284+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:27.743+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:30.285+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:30.744+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:33.286+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:33.744+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:36.286+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:36.744+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:39.289+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:39.744+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:42.288+0800","caller":"discovery/resolver.go:146","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:42.289+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:42.747+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:45.290+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:45.747+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:48.291+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:48.747+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:51.024+0800","caller":"discovery/resolver.go:146","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:51.028+0800","caller":"discovery/resolver.go:146","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:51.291+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:51.748+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:54.292+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:54.749+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:57.292+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:18:57.749+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:00.293+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:00.749+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:03.293+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:03.750+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:06.293+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:06.751+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:09.294+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:09.751+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:12.295+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:12.752+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:15.295+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:15.752+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:18.296+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:18.752+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:21.296+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:21.753+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:24.296+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:24.753+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:27.297+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:27.753+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:30.297+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:30.754+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:33.298+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:33.754+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:36.298+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:36.755+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:39.298+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:39.755+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:42.288+0800","caller":"discovery/resolver.go:146","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:42.299+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:42.756+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:45.300+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:45.757+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:48.300+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:48.757+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:51.023+0800","caller":"discovery/resolver.go:146","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:51.027+0800","caller":"discovery/resolver.go:146","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:51.300+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:51.757+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:54.301+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:54.759+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:57.301+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:19:57.759+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:00.301+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:00.759+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:03.302+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:03.760+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:06.302+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:06.760+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:09.302+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:09.760+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:12.303+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:12.761+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:15.303+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:15.761+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:18.304+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:18.761+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:21.304+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:21.761+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:24.304+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:24.762+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:27.304+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:27.762+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:30.305+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:30.763+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:33.306+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:33.763+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:36.306+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:36.763+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:39.307+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:39.763+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:42.287+0800","caller":"discovery/resolver.go:146","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:42.308+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:42.764+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:45.308+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:45.764+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:48.309+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:48.765+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:51.022+0800","caller":"discovery/resolver.go:146","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:51.028+0800","caller":"discovery/resolver.go:146","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:51.309+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:51.765+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:54.310+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:54.765+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:57.310+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:20:57.766+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:21:00.310+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:21:00.766+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:21:03.311+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:21:03.766+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:21:06.311+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:21:06.767+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:21:09.312+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:21:09.767+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:21:12.313+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-13T09:21:12.767+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"INFO","time":"2025-01-13T10:01:36.349+0800","caller":"midd/log_time.go:16","msg":"/project/notify/noReads 用时 0 ms"}
+{"level":"ERROR","time":"2025-01-13T10:01:36.375+0800","caller":"login.service.v1/login_service.go:226","msg":"TokenVerify cache get member error","error":"redis: nil"}
+{"level":"ERROR","time":"2025-01-13T10:01:36.376+0800","caller":"login.service.v1/login_service.go:226","msg":"TokenVerify cache get member error","error":"redis: nil"}
+{"level":"ERROR","time":"2025-01-13T10:01:36.376+0800","caller":"login.service.v1/login_service.go:226","msg":"TokenVerify cache get member error","error":"redis: nil"}
+{"level":"INFO","time":"2025-01-13T10:01:36.379+0800","caller":"midd/log_time.go:16","msg":"/project/organization/_getOrgList 用时 30 ms"}
+{"level":"INFO","time":"2025-01-13T10:01:36.379+0800","caller":"midd/log_time.go:16","msg":"/project/account 用时 30 ms"}
+{"level":"INFO","time":"2025-01-13T10:01:36.379+0800","caller":"midd/log_time.go:16","msg":"/project/department 用时 30 ms"}
+{"level":"INFO","time":"2025-01-13T10:01:38.931+0800","caller":"midd/log_time.go:16","msg":"/project/login/_out 用时 0 ms"}
+{"level":"INFO","time":"2025-01-13T10:01:38.996+0800","caller":"midd/log_time.go:16","msg":"/index/index/checkInstall 用时 0 ms"}
+{"level":"ERROR","time":"2025-01-13T10:01:45.926+0800","caller":"login.service.v1/login_service.go:159","msg":"Login db FindMember error","error":"Error 1146 (42S02): Table 'msproject.ms_member' doesn't exist"}
+{"level":"INFO","time":"2025-01-13T10:01:45.926+0800","caller":"midd/log_time.go:16","msg":"/project/login 用时 6 ms"}
+{"level":"INFO","time":"2025-01-13T10:03:24.407+0800","caller":"midd/log_time.go:16","msg":"/project/login 用时 17 ms"}
+{"level":"INFO","time":"2025-01-13T10:03:24.460+0800","caller":"midd/log_time.go:16","msg":"/project/index 用时 37 ms"}
+{"level":"INFO","time":"2025-01-13T10:03:24.634+0800","caller":"midd/log_time.go:16","msg":"/project/notify/noReads 用时 0 ms"}
+{"level":"INFO","time":"2025-01-13T10:03:24.634+0800","caller":"midd/log_time.go:16","msg":"/project/project/getLogBySelfProject 用时 0 ms"}
+{"level":"INFO","time":"2025-01-13T10:03:24.642+0800","caller":"midd/log_time.go:16","msg":"/project/events/myList 用时 0 ms"}
+{"level":"INFO","time":"2025-01-13T10:03:24.644+0800","caller":"interceptor/cache.go:53","msg":"/login.service.v1.LoginService/MyOrgList 放入缓存"}
+{"level":"INFO","time":"2025-01-13T10:03:24.645+0800","caller":"midd/log_time.go:16","msg":"/project/organization/_getOrgList 用时 16 ms"}
+{"level":"INFO","time":"2025-01-13T10:03:24.676+0800","caller":"interceptor/cache.go:53","msg":"/login.service.v1.LoginService/FindMemInfoById 放入缓存"}
+{"level":"INFO","time":"2025-01-13T10:03:24.677+0800","caller":"midd/log_time.go:16","msg":"/project/project/selfList 用时 43 ms"}
+{"level":"INFO","time":"2025-01-13T10:03:24.678+0800","caller":"midd/log_time.go:16","msg":"/project/task/selfList 用时 44 ms"}
+{"level":"INFO","time":"2025-01-13T10:03:24.680+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-13T10:03:24.687+0800","caller":"midd/log_time.go:16","msg":"/project/account 用时 53 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:07.588+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages 用时 24 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:07.588+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-13T10:05:07.588+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-13T10:05:07.590+0800","caller":"midd/log_time.go:16","msg":"/project/project/selfList 用时 26 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:07.592+0800","caller":"midd/log_time.go:16","msg":"/project/project/read 用时 28 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:07.593+0800","caller":"midd/log_time.go:16","msg":"/project/project_member/index 用时 29 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:07.594+0800","caller":"midd/log_time.go:16","msg":"/project/project/read 用时 38 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:07.707+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 16 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:07.709+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 13 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:07.709+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 13 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:07.713+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 18 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:07.717+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 21 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:07.720+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 24 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:07.726+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 12 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:08.929+0800","caller":"midd/log_time.go:16","msg":"/project/project_info 用时 0 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:08.930+0800","caller":"midd/log_time.go:16","msg":"/project/task/dateTotalForProject 用时 0 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:08.930+0800","caller":"midd/log_time.go:16","msg":"/project/project/getLogBySelfProject 用时 0 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:08.930+0800","caller":"midd/log_time.go:16","msg":"/project/project/_projectStats 用时 0 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:08.930+0800","caller":"midd/log_time.go:16","msg":"/project/project/_getProjectReport 用时 0 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:08.933+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-13T10:05:08.936+0800","caller":"midd/log_time.go:16","msg":"/project/project/read 用时 17 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:08.951+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-13T10:05:08.953+0800","caller":"midd/log_time.go:16","msg":"/project/project/selfList 用时 17 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:08.953+0800","caller":"midd/log_time.go:16","msg":"/project/project/read 用时 17 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:09.863+0800","caller":"midd/log_time.go:16","msg":"/project/file 用时 0 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:09.874+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-13T10:05:09.874+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-13T10:05:09.877+0800","caller":"midd/log_time.go:16","msg":"/project/project/read 用时 14 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:09.879+0800","caller":"midd/log_time.go:16","msg":"/project/project/read 用时 14 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:09.882+0800","caller":"midd/log_time.go:16","msg":"/project/project/selfList 用时 17 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:10.914+0800","caller":"midd/log_time.go:16","msg":"/project/project_features 用时 0 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:10.925+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-13T10:05:10.927+0800","caller":"midd/log_time.go:16","msg":"/project/project/read 用时 13 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:10.927+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-13T10:05:10.929+0800","caller":"midd/log_time.go:16","msg":"/project/project/read 用时 15 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:10.930+0800","caller":"midd/log_time.go:16","msg":"/project/project/selfList 用时 15 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:12.010+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-13T10:05:12.012+0800","caller":"midd/log_time.go:16","msg":"/project/department 用时 15 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:12.013+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-13T10:05:12.016+0800","caller":"midd/log_time.go:16","msg":"/project/account 用时 19 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:19.595+0800","caller":"midd/log_time.go:16","msg":"/project/department/save 用时 20 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:23.644+0800","caller":"midd/log_time.go:16","msg":"/project/notify/noReads 用时 0 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:23.647+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/MyOrgList 走了缓存"}
+{"level":"INFO","time":"2025-01-13T10:05:23.648+0800","caller":"midd/log_time.go:16","msg":"/project/organization/_getOrgList 用时 4 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:23.655+0800","caller":"midd/log_time.go:16","msg":"/project/department 用时 11 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:23.655+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-13T10:05:23.661+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-13T10:05:23.666+0800","caller":"midd/log_time.go:16","msg":"/project/account 用时 22 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:47.975+0800","caller":"midd/log_time.go:16","msg":"/project/notify/noReads 用时 0 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:47.979+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/MyOrgList 走了缓存"}
+{"level":"INFO","time":"2025-01-13T10:05:47.979+0800","caller":"midd/log_time.go:16","msg":"/project/organization/_getOrgList 用时 4 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:47.993+0800","caller":"midd/log_time.go:16","msg":"/project/department 用时 18 ms"}
+{"level":"INFO","time":"2025-01-13T10:05:47.999+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-13T10:05:48.008+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-13T10:05:48.015+0800","caller":"midd/log_time.go:16","msg":"/project/account 用时 40 ms"}
+{"level":"INFO","time":"2025-01-13T10:51:13.483+0800","caller":"midd/log_time.go:16","msg":"/project/login/_out 用时 0 ms"}
+{"level":"INFO","time":"2025-01-13T10:51:13.571+0800","caller":"midd/log_time.go:16","msg":"/index/index/checkInstall 用时 0 ms"}
+{"level":"INFO","time":"2025-01-13T10:51:18.745+0800","caller":"midd/log_time.go:16","msg":"/project/login 用时 9 ms"}
+{"level":"INFO","time":"2025-01-13T10:51:18.788+0800","caller":"midd/log_time.go:16","msg":"/project/index 用时 25 ms"}
+{"level":"INFO","time":"2025-01-13T10:51:18.995+0800","caller":"midd/log_time.go:16","msg":"/project/notify/noReads 用时 0 ms"}
+{"level":"INFO","time":"2025-01-13T10:51:18.995+0800","caller":"midd/log_time.go:16","msg":"/project/project/getLogBySelfProject 用时 0 ms"}
+{"level":"INFO","time":"2025-01-13T10:51:19.000+0800","caller":"interceptor/cache.go:53","msg":"/login.service.v1.LoginService/MyOrgList 放入缓存"}
+{"level":"INFO","time":"2025-01-13T10:51:19.002+0800","caller":"midd/log_time.go:16","msg":"/project/organization/_getOrgList 用时 10 ms"}
+{"level":"INFO","time":"2025-01-13T10:51:19.004+0800","caller":"midd/log_time.go:16","msg":"/project/events/myList 用时 0 ms"}
+{"level":"INFO","time":"2025-01-13T10:51:19.040+0800","caller":"interceptor/cache.go:53","msg":"/login.service.v1.LoginService/FindMemInfoById 放入缓存"}
+{"level":"INFO","time":"2025-01-13T10:51:19.045+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-13T10:51:19.045+0800","caller":"midd/log_time.go:16","msg":"/project/project/selfList 用时 50 ms"}
+{"level":"INFO","time":"2025-01-13T10:51:19.046+0800","caller":"midd/log_time.go:16","msg":"/project/task/selfList 用时 51 ms"}
+{"level":"INFO","time":"2025-01-13T10:51:19.054+0800","caller":"midd/log_time.go:16","msg":"/project/account 用时 57 ms"}
+{"level":"INFO","time":"2025-01-13T10:51:24.241+0800","caller":"midd/log_time.go:16","msg":"/project/project_template 用时 31 ms"}
+{"level":"INFO","time":"2025-01-13T10:51:24.248+0800","caller":"midd/log_time.go:16","msg":"/project/project 用时 39 ms"}
+{"level":"INFO","time":"2025-01-13T10:51:25.505+0800","caller":"midd/log_time.go:16","msg":"/project/project/analysis 用时 0 ms"}
+{"level":"INFO","time":"2025-01-13T10:51:25.528+0800","caller":"midd/log_time.go:16","msg":"/project/project/selfList 用时 23 ms"}
+{"level":"INFO","time":"2025-01-13T10:51:25.807+0800","caller":"midd/log_time.go:16","msg":"/project/project 用时 14 ms"}
+{"level":"INFO","time":"2025-01-13T10:51:25.808+0800","caller":"midd/log_time.go:16","msg":"/project/project_template 用时 15 ms"}
+{"level":"INFO","time":"2025-01-13T10:51:26.349+0800","caller":"midd/log_time.go:16","msg":"/project/project 用时 15 ms"}
+{"level":"INFO","time":"2025-01-13T10:51:27.217+0800","caller":"midd/log_time.go:16","msg":"/project/project 用时 15 ms"}
+{"level":"INFO","time":"2025-01-13T10:51:27.609+0800","caller":"midd/log_time.go:16","msg":"/project/organization 用时 0 ms"}
+{"level":"INFO","time":"2025-01-13T10:51:28.799+0800","caller":"midd/log_time.go:16","msg":"/project/project_template 用时 25 ms"}
+{"level":"INFO","time":"2025-01-13T10:51:29.907+0800","caller":"midd/log_time.go:16","msg":"/project/notify 用时 0 ms"}
+{"level":"INFO","time":"2025-01-13T10:51:31.180+0800","caller":"midd/log_time.go:16","msg":"/project/notify 用时 0 ms"}
+{"level":"INFO","time":"2025-01-13T10:51:32.053+0800","caller":"midd/log_time.go:16","msg":"/project/notify 用时 0 ms"}
+{"level":"INFO","time":"2025-01-13T10:51:33.304+0800","caller":"midd/log_time.go:16","msg":"/project/department 用时 16 ms"}
+{"level":"INFO","time":"2025-01-13T10:51:33.305+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-13T10:51:33.308+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-13T10:51:33.312+0800","caller":"midd/log_time.go:16","msg":"/project/account 用时 24 ms"}
+{"level":"INFO","time":"2025-01-13T10:51:34.500+0800","caller":"midd/log_time.go:16","msg":"/project/menu/menu 用时 32 ms"}
+{"level":"INFO","time":"2025-01-13T10:51:36.845+0800","caller":"midd/log_time.go:16","msg":"/project/project_template 用时 13 ms"}
+{"level":"INFO","time":"2025-01-13T10:51:36.847+0800","caller":"midd/log_time.go:16","msg":"/project/project 用时 15 ms"}
+{"level":"INFO","time":"2025-01-13T11:04:57.767+0800","caller":"midd/log_time.go:16","msg":"/project/notify/noReads 用时 0 ms"}
+{"level":"INFO","time":"2025-01-13T11:04:57.816+0800","caller":"interceptor/cache.go:53","msg":"/login.service.v1.LoginService/MyOrgList 放入缓存"}
+{"level":"INFO","time":"2025-01-13T11:04:57.819+0800","caller":"midd/log_time.go:16","msg":"/project/organization/_getOrgList 用时 52 ms"}
+{"level":"INFO","time":"2025-01-13T11:04:57.836+0800","caller":"midd/log_time.go:16","msg":"/project/project_template 用时 69 ms"}
+{"level":"INFO","time":"2025-01-13T11:04:57.837+0800","caller":"midd/log_time.go:16","msg":"/project/project 用时 70 ms"}
+{"level":"INFO","time":"2025-01-13T11:04:59.659+0800","caller":"midd/log_time.go:16","msg":"/project/login/_out 用时 0 ms"}
+{"level":"INFO","time":"2025-01-13T11:04:59.725+0800","caller":"midd/log_time.go:16","msg":"/index/index/checkInstall 用时 0 ms"}
+{"level":"INFO","time":"2025-01-13T11:05:04.617+0800","caller":"midd/log_time.go:16","msg":"/project/login 用时 8 ms"}
+{"level":"INFO","time":"2025-01-13T11:05:04.658+0800","caller":"midd/log_time.go:16","msg":"/project/index 用时 23 ms"}
+{"level":"INFO","time":"2025-01-13T11:05:04.829+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/MyOrgList 走了缓存"}
+{"level":"INFO","time":"2025-01-13T11:05:04.829+0800","caller":"midd/log_time.go:16","msg":"/project/organization/_getOrgList 用时 5 ms"}
+{"level":"INFO","time":"2025-01-13T11:05:04.830+0800","caller":"midd/log_time.go:16","msg":"/project/notify/noReads 用时 0 ms"}
+{"level":"INFO","time":"2025-01-13T11:05:04.831+0800","caller":"midd/log_time.go:16","msg":"/project/project/getLogBySelfProject 用时 0 ms"}
+{"level":"INFO","time":"2025-01-13T11:05:04.837+0800","caller":"midd/log_time.go:16","msg":"/project/events/myList 用时 0 ms"}
+{"level":"INFO","time":"2025-01-13T11:05:04.858+0800","caller":"midd/log_time.go:16","msg":"/project/task/selfList 用时 27 ms"}
+{"level":"INFO","time":"2025-01-13T11:05:04.862+0800","caller":"midd/log_time.go:16","msg":"/project/project/selfList 用时 32 ms"}
+{"level":"INFO","time":"2025-01-13T11:05:04.868+0800","caller":"interceptor/cache.go:53","msg":"/login.service.v1.LoginService/FindMemInfoById 放入缓存"}
+{"level":"INFO","time":"2025-01-13T11:05:04.876+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-13T11:05:04.885+0800","caller":"midd/log_time.go:16","msg":"/project/account 用时 53 ms"}
+{"level":"INFO","time":"2025-01-13T11:05:06.073+0800","caller":"midd/log_time.go:16","msg":"/project/project_template 用时 22 ms"}
+{"level":"INFO","time":"2025-01-13T11:05:06.077+0800","caller":"midd/log_time.go:16","msg":"/project/project 用时 26 ms"}
+{"level":"INFO","time":"2025-01-13T11:08:05.120+0800","caller":"midd/log_time.go:16","msg":"/project/notify/noReads 用时 0 ms"}
+{"level":"INFO","time":"2025-01-13T11:08:05.128+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/MyOrgList 走了缓存"}
+{"level":"INFO","time":"2025-01-13T11:08:05.130+0800","caller":"midd/log_time.go:16","msg":"/project/organization/_getOrgList 用时 10 ms"}
+{"level":"INFO","time":"2025-01-13T11:08:05.155+0800","caller":"midd/log_time.go:16","msg":"/project/project 用时 35 ms"}
+{"level":"INFO","time":"2025-01-13T11:08:05.157+0800","caller":"midd/log_time.go:16","msg":"/project/project_template 用时 37 ms"}
+{"level":"ERROR","time":"2025-01-13T11:11:31.310+0800","caller":"config/gorm.go:29","msg":"连接数据库失败, error=","error":"dial tcp 127.0.0.1:33091: connectex: No connection could be made because the target machine actively refused it."}
