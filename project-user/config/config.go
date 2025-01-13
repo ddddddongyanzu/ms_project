@@ -1,7 +1,9 @@
 package config
 
 import (
+	"bytes"
 	"github.com/go-redis/redis/v8"
+	"github.com/nacos-group/nacos-sdk-go/v2/vo"
 	"github.com/spf13/viper"
 	"log"
 	"os"
@@ -17,6 +19,7 @@ type Config struct {
 	EtcdConfig  *EtcdConfig
 	MysqlConfig *MysqlConfig
 	JwtConfig   *JwtConfig
+	DbConfig    DbConfig
 }
 
 type ServerConfig struct {
@@ -41,6 +44,13 @@ type MysqlConfig struct {
 	Host     string
 	Port     string
 	Db       string
+	Name     string
+}
+
+type DbConfig struct {
+	Master     MysqlConfig
+	Slave      []MysqlConfig
+	Separation bool
 }
 
 type JwtConfig struct {
@@ -52,23 +62,63 @@ type JwtConfig struct {
 
 func InitConfig() *Config {
 	conf := &Config{viper: viper.New()}
-	workDir, _ := os.Getwd()
-	conf.viper.SetConfigName("config")
-	conf.viper.SetConfigType("yaml")
-	conf.viper.AddConfigPath("/etc/ms_project/user")
-	conf.viper.AddConfigPath(workDir + "/config")
-
-	err := conf.viper.ReadInConfig()
-	if err != nil {
-		log.Fatalf("Fatal error config file: %s \n", err)
+	// 先从nacos配置，如果读取不到，在本地读取
+	nacosClient := InitNacosClient()
+	configYaml, err2 := nacosClient.configClient.GetConfig(vo.ConfigParam{
+		DataId: "config.yaml",
+		Group:  nacosClient.group,
+	})
+	if err2 != nil {
+		log.Fatalln(err2)
 	}
-	conf.ReadServerConfig()
-	conf.InitZapLog()
-	conf.ReadGrpcConfig()
-	conf.ReadEtcdConfig()
-	conf.InitMysqlConfig()
-	conf.InitJwtConfig()
+	err2 = nacosClient.configClient.ListenConfig(vo.ConfigParam{
+		DataId: "config.yaml",
+		Group:  nacosClient.group,
+		OnChange: func(namespace, group, dataId, data string) {
+			// 监听config的变化
+			log.Printf("load nacos config changed %s\n", data)
+			err := conf.viper.ReadConfig(bytes.NewBuffer([]byte(data)))
+			if err != nil {
+				log.Printf("load nacos config changed error: %s \n", err.Error())
+			}
+			// 所有的配置应该重新读取
+			conf.ReLoadAllConfig()
+		},
+	})
+	if err2 != nil {
+		log.Fatalln(err2)
+	}
+	conf.viper.SetConfigType("yaml")
+	if configYaml != "" {
+		err := conf.viper.ReadConfig(bytes.NewBuffer([]byte(configYaml)))
+		if err != nil {
+			log.Fatalf("Fatal error config file: %s \n", err)
+		}
+	} else {
+		workDir, _ := os.Getwd()
+		conf.viper.SetConfigName("config")
+		conf.viper.AddConfigPath("/etc/ms_project/user")
+		conf.viper.AddConfigPath(workDir + "/config")
+		err := conf.viper.ReadInConfig()
+		if err != nil {
+			log.Fatalf("Fatal error config file: %s \n", err)
+		}
+	}
+	conf.ReLoadAllConfig()
 	return conf
+}
+
+func (c *Config) ReLoadAllConfig() {
+	c.ReadServerConfig()
+	c.InitZapLog()
+	c.ReadGrpcConfig()
+	c.ReadEtcdConfig()
+	c.InitMysqlConfig()
+	c.InitJwtConfig()
+	c.InitDbConfig()
+	//重新创建相关的客户端
+	c.ReConnRedis()
+	c.ReConnMysql()
 }
 
 func (c *Config) InitZapLog() {
@@ -139,4 +189,24 @@ func (c *Config) InitJwtConfig() {
 		RefreshSecret: c.viper.GetString("jwt.refreshSecret"),
 	}
 	c.JwtConfig = jc
+}
+
+func (c *Config) InitDbConfig() {
+	mc := DbConfig{}
+	mc.Separation = c.viper.GetBool("db.separation")
+	var slaves []MysqlConfig
+	err := c.viper.UnmarshalKey("db.slave", &slaves)
+	if err != nil {
+		panic(err)
+	}
+	master := MysqlConfig{
+		Username: c.viper.GetString("db.master.username"),
+		Password: c.viper.GetString("db.master.password"),
+		Host:     c.viper.GetString("db.master.host"),
+		Port:     c.viper.GetString("db.master.port"),
+		Db:       c.viper.GetString("db.master.db"),
+	}
+	mc.Master = master
+	mc.Slave = slaves
+	c.DbConfig = mc
 }
