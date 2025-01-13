@@ -2,7 +2,6 @@ package project
 
 import (
 	"github.com/gin-gonic/gin"
-	"go.uber.org/zap"
 	"net/http"
 	"strings"
 	common "test.com/project-common"
@@ -18,7 +17,6 @@ var ignores = []string{
 
 func Auth() func(*gin.Context) {
 	return func(c *gin.Context) {
-		zap.L().Info("开始做授权认证")
 		result := &common.Result{}
 		//当用户登录认证通过，获取到用户信息，查询用户权限所拥有的节点信息
 		//根据请求的uri路径 进行匹配

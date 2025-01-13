@@ -17,6 +17,7 @@ type Config struct {
 	EtcdConfig  *EtcdConfig
 	MysqlConfig *MysqlConfig
 	JwtConfig   *JwtConfig
+	DbConfig    DbConfig
 }
 
 type ServerConfig struct {
@@ -41,6 +42,13 @@ type MysqlConfig struct {
 	Host     string
 	Port     string
 	Db       string
+	Name     string
+}
+
+type DbConfig struct {
+	Master     MysqlConfig
+	Slave      []MysqlConfig
+	Separation bool
 }
 
 type JwtConfig struct {
@@ -55,7 +63,7 @@ func InitConfig() *Config {
 	workDir, _ := os.Getwd()
 	conf.viper.SetConfigName("config")
 	conf.viper.SetConfigType("yaml")
-	conf.viper.AddConfigPath("/etc/ms_project/user")
+	conf.viper.AddConfigPath("/etc/ms_project/project")
 	conf.viper.AddConfigPath(workDir + "/config")
 
 	err := conf.viper.ReadInConfig()
@@ -68,6 +76,7 @@ func InitConfig() *Config {
 	conf.ReadEtcdConfig()
 	conf.InitMysqlConfig()
 	conf.InitJwtConfig()
+	conf.InitDbConfig()
 	return conf
 }
 
@@ -139,4 +148,24 @@ func (c *Config) InitJwtConfig() {
 		RefreshSecret: c.viper.GetString("jwt.refreshSecret"),
 	}
 	c.JwtConfig = jc
+}
+
+func (c *Config) InitDbConfig() {
+	mc := DbConfig{}
+	mc.Separation = c.viper.GetBool("db.separation")
+	var slaves []MysqlConfig
+	err := c.viper.UnmarshalKey("db.slave", &slaves)
+	if err != nil {
+		panic(err)
+	}
+	master := MysqlConfig{
+		Username: c.viper.GetString("db.master.username"),
+		Password: c.viper.GetString("db.master.password"),
+		Host:     c.viper.GetString("db.master.host"),
+		Port:     c.viper.GetString("db.master.port"),
+		Db:       c.viper.GetString("db.master.db"),
+	}
+	mc.Master = master
+	mc.Slave = slaves
+	c.DbConfig = mc
 }
