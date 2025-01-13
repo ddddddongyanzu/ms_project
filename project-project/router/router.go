@@ -2,6 +2,9 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
+	grpc_middleware "github.com/grpc-ecosystem/go-grpc-middleware"
+	"go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc"
+	"go.opentelemetry.io/otel"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/resolver"
 	"log"
@@ -71,7 +74,21 @@ func RegisterGrpc() *grpc.Server {
 			auth.RegisterAuthServiceServer(g, auth_service_v1.New())
 			menu.RegisterMenuServiceServer(g, menu_service_v1.New())
 		}}
-	s := grpc.NewServer(interceptor.New().Cache())
+	s := grpc.NewServer(
+		// 1. OpenTelemetry 通过 StatsHandler 来进行 Telemetry 统计和追踪
+		grpc.StatsHandler(
+			otelgrpc.NewServerHandler(
+				otelgrpc.WithTracerProvider(otel.GetTracerProvider()),
+			),
+		),
+		// 2. 自定义缓存拦截器走 UnaryInterceptor
+		grpc.UnaryInterceptor(
+			grpc_middleware.ChainUnaryServer(
+				interceptor.New().CacheInterceptor(),
+				// 如果需要，还可以链更多的拦截器
+			),
+		),
+	)
 	c.RegisterFunc(s)
 	lis, err := net.Listen("tcp", c.Addr)
 	if err != nil {
