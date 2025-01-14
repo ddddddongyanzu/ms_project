@@ -13,7 +13,7 @@ type MinioClient struct {
 	c *minio.Client
 }
 
-//秒传
+// 秒传
 func (c *MinioClient) Get(
 	ctx context.Context,
 	bucket string,
