@@ -14248,3 +14248,150 @@
 {"level":"INFO","time":"2025-01-13T14:49:23.205+0800","caller":"midd/log_time.go:16","msg":"/upload/e08cf4b394/e08df7b098/2025-01-10/%E8%AE%BA%E6%96%87%E5%B0%81%E9%9D%A2(1).doc 用时 120 ms"}
 {"level":"INFO","time":"2025-01-13T14:49:23.398+0800","caller":"midd/log_time.go:16","msg":"/upload/e08cf4b394/e08df7b098/2025-01-10/leetcode.pdf 用时 11 ms"}
 {"level":"INFO","time":"2025-01-13T14:49:23.400+0800","caller":"midd/log_time.go:16","msg":"/upload/e08cf4b394/e08df7b098/2025-01-10/%E5%AF%BC%E5%B8%88%E6%84%8F%E8%A7%81.doc 用时 13 ms"}
+{"level":"INFO","time":"2025-01-14T09:54:21.355+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 36 ms"}
+{"level":"INFO","time":"2025-01-14T09:57:52.594+0800","caller":"midd/log_time.go:16","msg":"/project/task/sort 用时 4 ms"}
+{"level":"INFO","time":"2025-01-14T10:04:32.590+0800","caller":"midd/log_time.go:16","msg":"/project/notify/noReads 用时 1 ms"}
+{"level":"INFO","time":"2025-01-14T10:04:32.625+0800","caller":"interceptor/cache.go:78","msg":"/login.service.v1.LoginService/MyOrgList 放入缓存"}
+{"level":"INFO","time":"2025-01-14T10:04:32.628+0800","caller":"midd/log_time.go:16","msg":"/project/organization/_getOrgList 用时 39 ms"}
+{"level":"INFO","time":"2025-01-14T10:04:32.644+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages 用时 54 ms"}
+{"level":"INFO","time":"2025-01-14T10:04:32.647+0800","caller":"midd/log_time.go:16","msg":"/project/project/selfList 用时 52 ms"}
+{"level":"INFO","time":"2025-01-14T10:04:32.648+0800","caller":"interceptor/cache.go:78","msg":"/login.service.v1.LoginService/FindMemInfoById 放入缓存"}
+{"level":"INFO","time":"2025-01-14T10:04:32.653+0800","caller":"midd/log_time.go:16","msg":"/project/project_member/index 用时 64 ms"}
+{"level":"INFO","time":"2025-01-14T10:04:32.654+0800","caller":"midd/log_time.go:16","msg":"/project/project/read 用时 65 ms"}
+{"level":"INFO","time":"2025-01-14T10:04:32.656+0800","caller":"interceptor/cache.go:78","msg":"/login.service.v1.LoginService/FindMemInfoById 放入缓存"}
+{"level":"INFO","time":"2025-01-14T10:04:32.661+0800","caller":"midd/log_time.go:16","msg":"/project/project/read 用时 71 ms"}
+{"level":"INFO","time":"2025-01-14T10:04:32.780+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 13 ms"}
+{"level":"INFO","time":"2025-01-14T10:04:32.788+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 25 ms"}
+{"level":"INFO","time":"2025-01-14T10:04:32.788+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 26 ms"}
+{"level":"INFO","time":"2025-01-14T10:04:32.792+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 26 ms"}
+{"level":"INFO","time":"2025-01-14T10:04:32.792+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 25 ms"}
+{"level":"INFO","time":"2025-01-14T10:04:32.792+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 25 ms"}
+{"level":"INFO","time":"2025-01-14T10:04:32.803+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 12 ms"}
+{"level":"INFO","time":"2025-01-14T10:04:35.431+0800","caller":"midd/log_time.go:16","msg":"/project/task/sort 用时 23 ms"}
+{"level":"INFO","time":"2025-01-14T10:04:36.936+0800","caller":"midd/log_time.go:16","msg":"/project/task/sort 用时 15 ms"}
+{"level":"INFO","time":"2025-01-14T10:04:38.272+0800","caller":"midd/log_time.go:16","msg":"/project/task/sort 用时 23 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:01.748+0800","caller":"midd/log_time.go:16","msg":"/project/file 用时 1 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:01.769+0800","caller":"interceptor/cache.go:72","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-14T10:06:01.769+0800","caller":"interceptor/cache.go:72","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-14T10:06:01.770+0800","caller":"midd/log_time.go:16","msg":"/project/project/selfList 用时 20 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:01.771+0800","caller":"midd/log_time.go:16","msg":"/project/project/read 用时 24 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:01.771+0800","caller":"midd/log_time.go:16","msg":"/project/project/read 用时 24 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:02.740+0800","caller":"interceptor/cache.go:72","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-14T10:06:02.740+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages 用时 17 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:02.742+0800","caller":"midd/log_time.go:16","msg":"/project/project/read 用时 19 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:02.743+0800","caller":"midd/log_time.go:16","msg":"/project/project_member/index 用时 20 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:02.743+0800","caller":"midd/log_time.go:16","msg":"/project/project/selfList 用时 20 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:02.744+0800","caller":"interceptor/cache.go:72","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-14T10:06:02.747+0800","caller":"midd/log_time.go:16","msg":"/project/project/read 用时 25 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:02.869+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 21 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:02.870+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 13 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:02.873+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 16 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:02.873+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 16 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:02.878+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 21 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:02.878+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 21 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:02.883+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 10 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:03.320+0800","caller":"midd/log_time.go:16","msg":"/project/project_info 用时 0 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:03.320+0800","caller":"midd/log_time.go:16","msg":"/project/project/getLogBySelfProject 用时 0 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:03.322+0800","caller":"midd/log_time.go:16","msg":"/project/task/dateTotalForProject 用时 0 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:03.323+0800","caller":"midd/log_time.go:16","msg":"/project/project/_projectStats 用时 0 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:03.323+0800","caller":"midd/log_time.go:16","msg":"/project/project/_getProjectReport 用时 0 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:03.338+0800","caller":"interceptor/cache.go:72","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-14T10:06:03.340+0800","caller":"midd/log_time.go:16","msg":"/project/project/read 用时 22 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:03.344+0800","caller":"interceptor/cache.go:72","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-14T10:06:03.347+0800","caller":"midd/log_time.go:16","msg":"/project/project/read 用时 19 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:03.348+0800","caller":"midd/log_time.go:16","msg":"/project/project/selfList 用时 20 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:04.064+0800","caller":"midd/log_time.go:16","msg":"/project/project_features 用时 0 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:04.081+0800","caller":"interceptor/cache.go:72","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-14T10:06:04.081+0800","caller":"interceptor/cache.go:72","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-14T10:06:04.085+0800","caller":"midd/log_time.go:16","msg":"/project/project/read 用时 21 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:04.085+0800","caller":"midd/log_time.go:16","msg":"/project/project/read 用时 20 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:04.086+0800","caller":"midd/log_time.go:16","msg":"/project/project/selfList 用时 22 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:06.014+0800","caller":"interceptor/cache.go:72","msg":"/login.service.v1.LoginService/MyOrgList 走了缓存"}
+{"level":"INFO","time":"2025-01-14T10:06:06.015+0800","caller":"midd/log_time.go:16","msg":"/project/organization/_getOrgList 用时 5 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:06.016+0800","caller":"midd/log_time.go:16","msg":"/project/notify/noReads 用时 0 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:06.016+0800","caller":"midd/log_time.go:16","msg":"/project/project/getLogBySelfProject 用时 0 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:06.019+0800","caller":"midd/log_time.go:16","msg":"/project/events/myList 用时 0 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:06.033+0800","caller":"interceptor/cache.go:72","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-14T10:06:06.038+0800","caller":"interceptor/cache.go:72","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-14T10:06:06.038+0800","caller":"midd/log_time.go:16","msg":"/project/project/selfList 用时 22 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:06.041+0800","caller":"midd/log_time.go:16","msg":"/project/task/selfList 用时 25 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:06.043+0800","caller":"midd/log_time.go:16","msg":"/project/account 用时 27 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:08.174+0800","caller":"interceptor/cache.go:72","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-14T10:06:08.174+0800","caller":"interceptor/cache.go:72","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-14T10:06:08.175+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages 用时 27 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:08.178+0800","caller":"midd/log_time.go:16","msg":"/project/project_member/index 用时 30 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:08.178+0800","caller":"midd/log_time.go:16","msg":"/project/project/read 用时 30 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:08.178+0800","caller":"midd/log_time.go:16","msg":"/project/project/read 用时 31 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:08.179+0800","caller":"midd/log_time.go:16","msg":"/project/project/selfList 用时 31 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:08.253+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 8 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:08.255+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 12 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:08.255+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 15 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:08.258+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 15 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:08.258+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 13 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:08.259+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 14 ms"}
+{"level":"INFO","time":"2025-01-14T10:06:08.267+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 11 ms"}
+{"level":"INFO","time":"2025-01-14T10:08:06.385+0800","caller":"midd/log_time.go:16","msg":"/project/project/getLogBySelfProject 用时 0 ms"}
+{"level":"INFO","time":"2025-01-14T10:08:06.388+0800","caller":"midd/log_time.go:16","msg":"/project/events/myList 用时 0 ms"}
+{"level":"INFO","time":"2025-01-14T10:08:06.405+0800","caller":"interceptor/cache.go:72","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-14T10:08:06.409+0800","caller":"midd/log_time.go:16","msg":"/project/project/selfList 用时 25 ms"}
+{"level":"INFO","time":"2025-01-14T10:08:06.409+0800","caller":"interceptor/cache.go:72","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-14T10:08:06.410+0800","caller":"midd/log_time.go:16","msg":"/project/task/selfList 用时 26 ms"}
+{"level":"INFO","time":"2025-01-14T10:08:06.415+0800","caller":"midd/log_time.go:16","msg":"/project/account 用时 30 ms"}
+{"level":"INFO","time":"2025-01-14T10:08:08.204+0800","caller":"interceptor/cache.go:72","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-14T10:08:08.204+0800","caller":"interceptor/cache.go:72","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-14T10:08:08.204+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages 用时 13 ms"}
+{"level":"INFO","time":"2025-01-14T10:08:08.206+0800","caller":"midd/log_time.go:16","msg":"/project/project_member/index 用时 16 ms"}
+{"level":"INFO","time":"2025-01-14T10:08:08.206+0800","caller":"midd/log_time.go:16","msg":"/project/project/selfList 用时 15 ms"}
+{"level":"INFO","time":"2025-01-14T10:08:08.206+0800","caller":"midd/log_time.go:16","msg":"/project/project/read 用时 17 ms"}
+{"level":"INFO","time":"2025-01-14T10:08:08.206+0800","caller":"midd/log_time.go:16","msg":"/project/project/read 用时 16 ms"}
+{"level":"INFO","time":"2025-01-14T10:08:23.646+0800","caller":"midd/log_time.go:16","msg":"/project/events/myList 用时 0 ms"}
+{"level":"INFO","time":"2025-01-14T10:08:23.646+0800","caller":"midd/log_time.go:16","msg":"/project/project/getLogBySelfProject 用时 0 ms"}
+{"level":"INFO","time":"2025-01-14T10:08:23.664+0800","caller":"interceptor/cache.go:72","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-14T10:08:23.669+0800","caller":"interceptor/cache.go:72","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-14T10:08:23.669+0800","caller":"midd/log_time.go:16","msg":"/project/task/selfList 用时 26 ms"}
+{"level":"INFO","time":"2025-01-14T10:08:23.669+0800","caller":"midd/log_time.go:16","msg":"/project/project/selfList 用时 27 ms"}
+{"level":"INFO","time":"2025-01-14T10:08:23.674+0800","caller":"midd/log_time.go:16","msg":"/project/account 用时 28 ms"}
+{"level":"INFO","time":"2025-01-14T10:08:44.071+0800","caller":"midd/log_time.go:16","msg":"/project/project_template 用时 22 ms"}
+{"level":"INFO","time":"2025-01-14T10:08:44.073+0800","caller":"midd/log_time.go:16","msg":"/project/project 用时 25 ms"}
+{"level":"INFO","time":"2025-01-14T10:08:45.175+0800","caller":"midd/log_time.go:16","msg":"/project/department 用时 15 ms"}
+{"level":"INFO","time":"2025-01-14T10:08:45.175+0800","caller":"interceptor/cache.go:72","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-14T10:08:45.177+0800","caller":"interceptor/cache.go:72","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-14T10:08:45.182+0800","caller":"midd/log_time.go:16","msg":"/project/account 用时 22 ms"}
+{"level":"INFO","time":"2025-01-14T10:08:46.352+0800","caller":"midd/log_time.go:16","msg":"/project/menu/menu 用时 22 ms"}
+{"level":"INFO","time":"2025-01-14T10:08:46.886+0800","caller":"midd/log_time.go:16","msg":"/project/department 用时 12 ms"}
+{"level":"INFO","time":"2025-01-14T10:08:46.887+0800","caller":"interceptor/cache.go:72","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-14T10:08:46.891+0800","caller":"interceptor/cache.go:72","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-14T10:08:46.896+0800","caller":"midd/log_time.go:16","msg":"/project/account 用时 22 ms"}
+{"level":"INFO","time":"2025-01-14T10:08:47.185+0800","caller":"midd/log_time.go:16","msg":"/project/project_template 用时 13 ms"}
+{"level":"INFO","time":"2025-01-14T10:08:47.187+0800","caller":"midd/log_time.go:16","msg":"/project/project 用时 17 ms"}
+{"level":"INFO","time":"2025-01-14T10:08:49.215+0800","caller":"midd/log_time.go:16","msg":"/project/project/getLogBySelfProject 用时 0 ms"}
+{"level":"INFO","time":"2025-01-14T10:08:49.215+0800","caller":"midd/log_time.go:16","msg":"/project/events/myList 用时 0 ms"}
+{"level":"INFO","time":"2025-01-14T10:08:49.229+0800","caller":"interceptor/cache.go:72","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-14T10:08:49.233+0800","caller":"interceptor/cache.go:72","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-14T10:08:49.234+0800","caller":"midd/log_time.go:16","msg":"/project/project/selfList 用时 20 ms"}
+{"level":"INFO","time":"2025-01-14T10:08:49.234+0800","caller":"midd/log_time.go:16","msg":"/project/task/selfList 用时 19 ms"}
+{"level":"INFO","time":"2025-01-14T10:08:49.238+0800","caller":"midd/log_time.go:16","msg":"/project/account 用时 23 ms"}
+{"level":"INFO","time":"2025-01-14T10:42:50.468+0800","caller":"midd/log_time.go:16","msg":"/project/notify/noReads 用时 0 ms"}
+{"level":"INFO","time":"2025-01-14T10:42:50.468+0800","caller":"midd/log_time.go:16","msg":"/project/project/getLogBySelfProject 用时 0 ms"}
+{"level":"INFO","time":"2025-01-14T10:42:50.478+0800","caller":"midd/log_time.go:16","msg":"/project/events/myList 用时 1 ms"}
+{"level":"INFO","time":"2025-01-14T10:42:50.510+0800","caller":"interceptor/cache.go:78","msg":"/login.service.v1.LoginService/MyOrgList 放入缓存"}
+{"level":"INFO","time":"2025-01-14T10:42:50.511+0800","caller":"midd/log_time.go:16","msg":"/project/organization/_getOrgList 用时 43 ms"}
+{"level":"INFO","time":"2025-01-14T10:42:50.534+0800","caller":"midd/log_time.go:16","msg":"/project/project/selfList 用时 66 ms"}
+{"level":"INFO","time":"2025-01-14T10:42:50.537+0800","caller":"midd/log_time.go:16","msg":"/project/task/selfList 用时 69 ms"}
+{"level":"INFO","time":"2025-01-14T10:42:50.539+0800","caller":"interceptor/cache.go:78","msg":"/login.service.v1.LoginService/FindMemInfoById 放入缓存"}
+{"level":"INFO","time":"2025-01-14T10:42:50.545+0800","caller":"interceptor/cache.go:72","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-14T10:42:50.550+0800","caller":"midd/log_time.go:16","msg":"/project/account 用时 82 ms"}
+{"level":"INFO","time":"2025-01-14T10:42:52.317+0800","caller":"interceptor/cache.go:72","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-14T10:42:52.319+0800","caller":"interceptor/cache.go:72","msg":"/login.service.v1.LoginService/FindMemInfoById 走了缓存"}
+{"level":"INFO","time":"2025-01-14T10:42:52.320+0800","caller":"midd/log_time.go:16","msg":"/project/project/read 用时 20 ms"}
+{"level":"INFO","time":"2025-01-14T10:42:52.320+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages 用时 16 ms"}
+{"level":"INFO","time":"2025-01-14T10:42:52.321+0800","caller":"midd/log_time.go:16","msg":"/project/project/read 用时 17 ms"}
+{"level":"INFO","time":"2025-01-14T10:42:52.322+0800","caller":"midd/log_time.go:16","msg":"/project/project_member/index 用时 19 ms"}
+{"level":"INFO","time":"2025-01-14T10:42:52.323+0800","caller":"midd/log_time.go:16","msg":"/project/project/selfList 用时 19 ms"}
+{"level":"INFO","time":"2025-01-14T10:42:52.409+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 9 ms"}
+{"level":"INFO","time":"2025-01-14T10:42:52.413+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 13 ms"}
+{"level":"INFO","time":"2025-01-14T10:42:52.413+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 16 ms"}
+{"level":"INFO","time":"2025-01-14T10:42:52.418+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 18 ms"}
+{"level":"INFO","time":"2025-01-14T10:42:52.418+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 18 ms"}
+{"level":"INFO","time":"2025-01-14T10:42:52.418+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 18 ms"}
+{"level":"INFO","time":"2025-01-14T10:42:52.423+0800","caller":"midd/log_time.go:16","msg":"/project/task_stages/tasks 用时 10 ms"}
