@@ -30,9 +30,13 @@ func main() {
 	router.RegisterEtcdServer()
 	//初始化kafka
 	c := config.InitKafkaWriter()
+	//初始化kafka消费者
+	reader := config.NewCacheReader()
+	go reader.DeleteCache()
 	stop := func() {
 		gc.Stop()
 		c()
+		reader.R.Close()
 	}
 	srv.Run(r, config.C.SC.Name, config.C.SC.Addr, stop)
 }

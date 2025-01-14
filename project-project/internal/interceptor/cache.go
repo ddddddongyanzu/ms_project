@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"go.uber.org/zap"
 	"google.golang.org/grpc"
+	"strings"
 	"test.com/project-common/encrypts"
+	"test.com/project-grpc/task"
 	"test.com/project-project/internal/dao"
 	"test.com/project-project/internal/repo"
 	"time"
@@ -25,7 +27,7 @@ type CacheRespOption struct {
 
 func New() *CacheInterceptor {
 	cacheMap := make(map[string]any)
-	//cacheMap["/project.service.v1.ProjectService/FindProjectByMemId"] = &project.MyProjectResponse{}
+	cacheMap["/task.service.v1.TaskService/TaskList"] = &task.TaskListResponse{}
 	return &CacheInterceptor{cache: dao.Rc, cacheMap: cacheMap}
 }
 
@@ -56,6 +58,7 @@ func (c *CacheInterceptor) Cache() grpc.ServerOption {
 
 func (c *CacheInterceptor) CacheInterceptor() func(ctx context.Context, req interface{}, info *grpc.UnaryServerInfo, handler grpc.UnaryHandler) (resp interface{}, err error) {
 	return func(ctx context.Context, req interface{}, info *grpc.UnaryServerInfo, handler grpc.UnaryHandler) (resp interface{}, err error) {
+		c = New()
 		respType := c.cacheMap[info.FullMethod]
 		if respType == nil {
 			return handler(ctx, req)
@@ -75,6 +78,10 @@ func (c *CacheInterceptor) CacheInterceptor() func(ctx context.Context, req inte
 		bytes, _ := json.Marshal(resp)
 		c.cache.Put(con, info.FullMethod+"::"+cacheKey, string(bytes), 5*time.Minute)
 		zap.L().Info(info.FullMethod + " 放入缓存")
+		//hash key task field rediskey
+		if strings.HasPrefix(info.FullMethod, "/task") {
+			c.cache.HSet(con, "task", info.FullMethod+"::"+cacheKey, "")
+		}
 		return
 	}
 }

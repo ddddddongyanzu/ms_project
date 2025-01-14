@@ -9,6 +9,7 @@ import (
 	"test.com/project-common/tms"
 	"test.com/project-grpc/task"
 	"test.com/project-grpc/user/login"
+	"test.com/project-project/config"
 	"test.com/project-project/internal/dao"
 	"test.com/project-project/internal/data"
 	"test.com/project-project/internal/database"
@@ -276,6 +277,8 @@ func (t *TaskService) SaveTask(ctx context.Context, msg *task.TaskReqMessage) (*
 	createProjectLog(t.projectLogRepo, ts.ProjectCode, ts.Id, ts.Name, ts.AssignTo, "create", "task")
 	tm := &task.TaskMessage{}
 	copier.Copy(tm, display)
+	// 发送kafka 缓存删除
+	config.SendCache([]byte("task"))
 	return tm, nil
 }
 
