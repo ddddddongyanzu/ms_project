@@ -359,3 +359,5 @@
 {"level":"ERROR","time":"2025-01-14T11:50:28.689+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
 {"level":"ERROR","time":"2025-01-14T11:50:31.680+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
 {"level":"ERROR","time":"2025-01-14T11:50:31.689+0800","caller":"discovery/discovery.go:114","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2025-01-14T21:17:40.260+0800","caller":"task.service.v1/task_service.go:706","msg":"project task SaveTaskFile fileRepo.Save error","error":"Error 1406 (22001): Data too long for column 'title' at row 1"}
+{"level":"ERROR","time":"2025-01-14T21:18:10.754+0800","caller":"task.service.v1/task_service.go:706","msg":"project task SaveTaskFile fileRepo.Save error","error":"Error 1406 (22001): Data too long for column 'title' at row 1"}
